@@ -1,0 +1,53 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+{% include "includes/_navbar4.html" %}
+
+<!-- Seyahatler Containerı -->
+<div class="seyahatler-container">
+    <div class="row">
+        <h1>Seyahatler</h1>
+        <hr>
+        <div class="row">
+            <div>
+                <h2>Henüz seyahat rezervasyonu yok.</h2>
+                <p class="seyahet-p">
+                    Bavullarınızı çıkartıp bir sonraki serüveninizi planlamaya başlama zamanı
+                </p>
+                <button type="button" class=" btn btn-outline-secondary mb-5">Aramaya başlayın</button>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="seyahet-p">Rezervasyonunuzu burada bulamıyor musunuz?</p>
+                </div>
+                <div class="col-md-3 justify-content-start">
+                    <a href="" style="color: black;">Yardım merkezini ziyaret edin.</a> 
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Seyahatler Containerı -->
+
+{% include "includes/_footer2.html" %}
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

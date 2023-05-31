@@ -1,0 +1,22 @@
+{% extends "ilan2.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container-fiyat">
+    
+        <h1>Şimdi evinizin fiyatını belirleyin</h1>
+        
+        <div class="input-group-money w-50">
+          <input type="text" class="form-control fs-3" placeholder="Fiyat Giriniz/Gece" aria-label="Recipient's username with two button addons">
+          <button class="btn btn-outline-secondary btnmoney" type="button"><i class="fa-sharp fa-solid fa-turkish-lira-sign"></i></button>
+          <button class="btn btn-outline-secondary" type="button">Fiyat Belirle</button>
+        </div>
+    </div>
+
+     <!-- footer -->
+       <div class="container-fluid footer-basla position-fixed bottom-0 bg-white d-flex justify-content-between align-items-center ">
+        <a class="text-black fw-semibold ms-5" href="{% url 'ilan9' %}">Geri</a>
+        <a href="{% url 'ilan11' %}" class="a1">Sonraki</a>
+    </div>
+    
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% load static %}
+
+<!-- Navbar -->
+<div class="container-fluid ilan d-flex justify-content-between position-sticky top-0 bg-white align-items-center">
+
+    <div >
+      <a href="{% url 'index' %}" class="ilan-logo">
+          <img src="{% static 'img/logo-siyah.jpeg' %}" width="40px" height="35px" alt="logo"/>
+      </a>
+    </div>
+
+    <div class="ilan-btn d-flex justify-content-between ">
+      <div>
+        <button class="me-3">Sorularınız var mı?</button>
+      </div>
+
+      <div>
+        <button class="">Kaydet ve çık</button>
+      </div>
+    </div>
+
+  </div>
+
+  <hr id="scroll-indicator" style="display: none" class="position-sticky" />

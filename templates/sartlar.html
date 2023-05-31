@@ -1,0 +1,298 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="container-fluid">
+
+  {% include "includes/_navbar5.html" %}
+
+  <!--! Responsive Gizlilik Bölümü Navbar -->
+  <div class="container-fluid d-flex justify-content-around d-block d-md-none">
+    <div class="navbar-gizlilik" style="width: 90%;">
+      <div class="row">
+        <!-- Yardım Merkezi Logo -->
+        <div class="col">
+          <img src="{% static 'img/logo-siyah.jpeg' %}" width="32px" height="32px" alt="">
+          <a class="text-black text-decoration-none fs-5" href="">
+            <b>Yardım Merkezi</b>
+          </a>
+        </div>
+        <!-- Yardım Merkezi Giriş Yap Kaydol bölümüne aktarma -->
+        <div class="col">
+          <div class="col rigth d-flex justify-content-end">
+            <button class="btn1">
+              <i class="bi bi-search text-decoration-none w-100"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--! Responsive Gizlilik Bölümü Navbar -->
+</div>
+
+
+<div class="container-fluid">
+  <!--! Responsive Gizlilik Büyük Çıkan Buton -->
+  <section class="responsive-btn">
+    <a href="{% url 'register' %}"
+      class="btn-kaydol text-white p-2 pe-5 ps-5 mt-2 pt-3 rounded-3 border-0 text-center text-decoration-none">
+      Oturum açın veya kaydolun
+    </a>
+  </section>
+  <!--! Responsive Gizlilik Büyük Çıkan Buton -->
+
+  <section class="yasal-sartlar px-4">
+    <!-- Gizlilik Header Altında olan Gezinti menüsü -->
+    <div class="row">
+      <div class="col-12 gezinti-menüsü d-inline-block text-start mt-4 ">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb ">
+            <li class="breadcrumb-item text-black"><a href="#">Ana sayfa</a></li>
+            <li class="breadcrumb-item text-black"><a href="#">Tüm konular</a></li>
+            <li class="breadcrumb-item text-black"><a href="#">Yasal Şartlar</a></li>
+            <li class="breadcrumb-item text-black"><a href="#">Gizlilik Politikası</a></li>
+            <li class="breadcrumb-item active text-black" aria-current="page">Airbnb Gizlilik Politikası</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Gizlilik Header Altında olan Gezinti menüsü -->
+    <!-- Gizlilik Başlık ve Resim -->
+    <div class="row mt-4">
+
+      <span class="text-secondary">Yasal şartlar</span>
+      <h3 class="fw-bold">Hizmet Şartları</h3>
+
+      <div class="sartlar-inner col-md-8 col-12 text-black">
+        <div class="yasal-sartlar-bilgilendirme mt-5 d-flex align-items-center">
+          <div class="bilgilendirme-icon  mr-2">
+            <i class="fa-solid fa-globe p-2 text-primary mb-5 pb-4"></i>
+          </div>
+          <div class="bilgilendirme">
+            <span class="d-block">
+              If your country of residence or establishment is within the European Economic Area (“EEA”), Switzerland
+              or the United Kingdom, the <a class="text-black" href="">Terms of Service for European Users</a> apply
+              to you.
+            </span>
+            <span class="d-block mt-1">
+              If your country of residence or establishment is outside of the EEA, Switzerland, and the United
+              Kingdom, the <a class="text-black" href="">Terms of Service for Non-European Users</a> apply to you.
+            </span>
+          </div>
+        </div>
+
+        <!-- Şartlar Metinleri -->
+        <div class="metinler mt-5 text-black">
+          <h2 class="mt-3 text-black"><strong>Terms of Service for Non-European Users</strong></h2>
+          <span class="mt-3 text-black"><strong>Section 23 of these Terms contains an arbitration agreement and class
+              action
+              waiver that apply to all claims brought against Airbnb in the United States. Please read them
+              carefully.</strong></span>
+          <p class="mt-3 text-black">Last Updated: 25 Ocak 2023</p>
+          <p class="mt-3 text-black">Thank you for using Airbnb!</p>
+          <p class="mt-3 text-black">These Terms of Service <strong>(“Terms”)</strong> are a binding legal agreement
+            between
+            you and Airbnb that govern your right to use the websites, applications, and other offerings from
+            Airbnb (collectively, the <strong>“Airbnb Platform”</strong> ). When used in these Terms,
+            <strong>“Airbnb,”</strong> <strong>“we,”</strong> <strong>“us,”</strong> or refers to the Airbnb
+            entity set out on <strong><a href="" class="text-black">Schedule 1</a></strong> with whom you are
+            contracting.
+          </p>
+          <p class="mt-3 text-black">The Airbnb Platform offers an online venue that enables users
+            <strong>(“Members”)</strong> to publish, offer, search for, and book services. Members who publish
+            and
+            offer services are <strong>“Hosts”</strong> and Members who search for, book, or use services are
+            <strong>“Guests.”</strong> Hosts offer accommodations <strong>(“Accommodations”)</strong>,
+            activities,
+            excursions, and events <strong>(“Experiences”)</strong>, and a variety of travel and other services
+            (collectively, <strong>“Host Services,”</strong> and each Host Service offering, a
+            <strong>“Listing”</strong>). You must register an account to access and use many features of the
+            Airbnb Platform, and must keep your account information accurate. As the provider of the Airbnb
+            Platform, Airbnb does not own, control, offer or manage any Listings or Host Services. Airbnb is not
+            a
+            party to the contracts entered into directly between Hosts and Guests, nor is Airbnb a real estate
+            broker, travel agency, or insurer. Airbnb is not acting as an agent in any capacity for any Member,
+            except as specified in the <strong><a href="" class="text-black">Payments Terms of
+                Service</a>(“Payment Terms”)</strong>. To learn more about Airbnb’s role see Section 16.
+          </p>
+          <p class="mt-3 text-black">We maintain other <strong><a href="" class="text-black">terms</a></strong> and
+            <strong><a href="" class="text-black">policies</a></strong> that supplement these Terms like our
+            <strong><a href="" class="text-black">Privacy Policy</a></strong> , which describes our collection
+            and
+            use of personal data, and our <strong><a href="" class="text-black">Payments Terms</a></strong> ,
+            which govern any payment services provided to Members by the Airbnb payment entities (collectively
+            <strong>"Airbnb Payments"</strong>).
+          </p>
+          <p class="mt-3 text-black">If you are a Host, you are responsible for understanding and complying with all
+            laws,
+            rules, regulations and contracts with third parties that apply to your Host Services.</p>
+          <h4><strong>Table of Contents</strong></h5>
+            <h6><strong>Guest Terms</strong></h6>
+            <ol class="ps-3">
+              <li><strong><a href="" class="text-black">Our Mission.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Searching and Booking on
+                    Airbnb.</a></strong>
+              </li>
+              <li class="mt-2"><strong><a href="" class="text-black">Cancellations, Travel Issues, Refunds and
+                    Booking Modifications.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Your Responsibilities and Assumption of
+                    Risk.</a></strong></li>
+            </ol>
+            <h6><strong>Host Terms</strong></h6>
+            <ol start="5" class="ps-3">
+              <li class="mt-2"><strong><a href="" class="text-black">Hosting on Airbnb.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Managing Your Listing.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Cancellations, Travel Issues, and Booking
+                    Modifications.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Taxes.</a></strong></li>
+            </ol>
+            <h6><strong>General Terms</strong></h6>
+            <ol start="9" class="ps-3">
+              <li class="mt-2"><strong><a href="" class="text-black">Reviews.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Content.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Fees.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Airbnb Platform Rules.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black"> Termination, Suspension and other
+                    Measures.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Modification.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Resolving Complaints and Damage
+                    Claims.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Airbnb’s Role.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Member Accounts.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Disclaimer of Warranties.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Limitations on Liability.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Indemnification.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Contracting Entities.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">United States Governing Law and
+                    Venue.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">United States Dispute Resolution and
+                    Arbitration Agreement.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">China Governing Law and Dispute
+                    Resolution.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Brazil Governing Law and
+                    Venue.</a></strong>
+              </li>
+              <li class="mt-2"><strong><a href="" class="text-black">Rest of World Dispute Resolution, Venue and
+                    Forum, and Governing Law.</a></strong></li>
+              <li class="mt-2"><strong><a href="" class="text-black">Miscellaneous.</a></strong></li>
+            </ol>
+            <p class="text-black"><strong><a href="" class="text-black">Schedule 1 - Contracting Entities</a></strong>
+            </p>
+            <h4 class="mt-5"><strong>Guest Terms</strong></h4>
+            <p class="mt-3 text-black"><strong>1. Our Mission.</strong></p>
+            <p class="text-black">Our mission is to create a world where you can belong anywhere. From cabins to
+              castles to cooking
+              classes, browse through millions of Listings to find the ones that fit the way you like to travel.
+              Learn more about a Listing by reviewing the description and photos, the Host profile, and Guest
+              reviews. If you have questions, just message the Host.</p>
+            <p class="text-black"><strong>2. Searching and Booking on Airbnb.</strong></p>
+            <p class="text-black"><strong>2.1 Searching.</strong>You can search for Host Services by using criteria
+              like the type
+              of
+              Host Service, travel destination, travel dates, and number of guests. You can also use filters to
+              refine your search results. Search results are based on their relevance to your search and other
+              criteria. Relevance considers factors like price, availability, Reviews, customer service and
+              cancellation history, popularity, previous trips and saved Listings, Host requirements (e.g.
+              minimum
+              or maximum nights), and more. Learn more about search results in our <strong><a class="text-black"
+                  href="">Help Center.</a></strong></p>
+            <p class="text-black"><strong>2.2 Booking.</strong>When you book a Listing, you are agreeing to pay all
+              charges for
+              your
+              booking including the Listing price, applicable fees like <strong><a href="" class="text-black">Airbnb’s
+                  service fee</a></strong>, <strong><a href="" class="text-black">offline fees</a></strong>,
+              <strong><a href="" class="text-black">taxes</a></strong>, and any other items identified during checkout
+              (collectively, “Total Price”). You are also agreeing that Airbnb via Airbnb Payments may charge
+              the
+              Payment Method (as defined in the Payment Terms) used to book the Listing in order to collect
+              Damage
+              Claim (as defined in Section 15) amounts. When you receive the booking confirmation, a contract
+              for
+              Host Services (a <strong>"Reservation"</strong>) is formed directly between you and the Host. In
+              addition to these Terms, you will be subject to, and responsible for complying with, all terms of
+              the Reservation, including without limitation, the cancellation policy and any other rules,
+              standards, policies, or requirements identified in the Listing or during checkout that apply to
+              the
+              Reservation. It is your responsibility to read and understand these rules, standards, policies,
+              and
+              requirements prior to booking a Listing.Be aware that some Hosts work with a co-host or as part of
+              a
+              team to provide their Host Services.
+            </p>
+            <p class="text-black"><strong>2.3 Accommodation Reservations.</strong>An Accommodation Reservation is a
+              limited license
+              to enter, occupy, and use the Accommodation. The Host retains the right to re-enter the
+              Accommodation during your stay, to the extent: (i) it is reasonably necessary, (ii) permitted by
+              your contract with the Host, and (iii) consistent with applicable law. If you stay past checkout,
+              the Host has the right to make you leave in a manner consistent with applicable law, including by
+              imposing reasonable overstay penalties. You may not exceed the maximum number of allowed Guests.
+            </p>
+            <p class="text-black"><strong>2.4 Reservations for Experiences and Other Host Services.</strong>An
+              Experience or other
+              Host Service Reservation entitles you to participate in, attend, or use that Host Service. You are
+              responsible for confirming that you, and anyone you invite, meet minimum age, proficiency,
+              fitness,
+              or other requirements. You are responsible for informing the Host of any medical or physical
+              conditions, or other circumstances that may impact your ability to participate, attend, or use the
+              Host Service. Except where expressly authorized, you may not allow any person to join a Host
+              Service
+              unless they are included as an additional guest during the booking process.</p>
+            <p class="text-black"><strong>3. Cancellations, Travel Issues, Refunds and Booking Modifications.</strong>
+            </p>
+            <p class="text-black"><strong>3.1 Cancellations, Travel Issues, and Refunds.</strong>In general, if as a
+              Guest you
+              cancel
+              a Reservation, the amount refunded to you is determined by the <strong><a href=""
+                  class="text-black">cancellation policy</a></strong> that applies to that Reservation. But, in
+              certain situations, other policies take precedence and determine what amount is refunded to you.
+              If
+              something outside your control forces you to cancel a Reservation, you may be eligible for a
+              partial
+              or full refund under our <strong><a href="" class="text-black">Extenuating Circumstances
+                  Policy</a></strong> . If the Host cancels, or you experience a Travel Issue (as defined in our
+              <strong><a href="" class="text-black">Rebooking and Refund Policy</a></strong>), you may be
+              eligible
+              for rebooking assistance or a partial or full refund under the <strong><a href=""
+                  class="text-black">Rebooking and Refund Policy</a></strong> . Different policies apply to
+              certain categories of Listings; for example Experiences Reservations are governed by the
+              <strong><a href="" class="text-black">Experiences Guest Refund Policy</a></strong> , and Luxe
+              Reservations
+              are governed by the <strong><a href="" class="text-black">Luxe Rebooking and Refund
+                  Policy</a></strong>. See each <strong><a href="" class="text-black">Additional Legal
+                  Term</a></strong> or <strong><a href="" class="text-black">Policy</a></strong> for details
+              about
+              what is covered, and what refund applies in each situation.
+            </p>
+        </div>
+        <!-- Şartlar Metinleri -->
+      </div>
+      <div class="col-lg-4 col-12 text-center d-flex justify-content-end">
+        <div class="kaydol rounded-4 me-5" id="responsive-div">
+          <div class="row d-flex flex-column">
+            <div class="col">
+              <span class="text-center">
+                Rezervasyonlarınız, hesabınız ve çok daha fazlasıyla ilgili yardım alın.
+              </span>
+            </div>
+            <div class="col mt-3">
+              <a href="login.html"
+                class="btn-kaydol text-white p-2 pe-5 ps-5 mt-2 rounded-3 border-0 text-center text-decoration-none">
+                Oturum açın veya kaydolun
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- Gizlilik Başlık ve Resim -->
+
+    {% include "includes/_footer3.html" %}
+</div>
+
+{% endblock content %}

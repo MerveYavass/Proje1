@@ -1,0 +1,812 @@
+{% load static %}
+<!--! FOOTER START -->
+  <!-- DİLLER -->
+  <section id="languages">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="container" style="overflow-y: scroll; height: 500px;">
+            <div class="modal-body">
+              <!--! Önemliiii  -->
+              <div class="row mt-4">
+                <div class="col-7" style="background-color: #f7f7f7; padding: 15px; border-radius: 8px;">
+                  <div class="row">
+                    <div class="col-10">
+                      <span class="d-block">Çeviri <i class="bi bi-translate"></i> </span>
+                      <span class="d-block">Açıklama ve değerlendirmelerin otomatik olarak çevrileceği dil:
+                        Türkçe.</span>
+                    </div>
+                    <div class="col-2">
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          style="width: 60px; height: 40px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-5"></div>
+              </div>
+              <div class="row">
+                <h4 class="mt-4 mb-4 fs-3">Önerilen dil ve bölge</h4>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">United Kingdom</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">United States</span>
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+              </div>
+              <div class="row">
+                <h4 class="mb-4 fs-3">Bir dil ve bölge seçin</h4>
+                <div class="dil col" style="border: 1px solid black; border-radius: 10px;">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Türkçe</a></span>
+                  <span style="display:block;">Türkiye</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Azərbaycan
+                      dili</a></span>
+                  <span style="display:block;">Azərbaycan</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Bahasa
+                      Indonesia</a></span>
+                  <span style="display:block;">Indonesia</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Bosanski</a></span>
+                  <span style="display:block;">Bosna i Hercegovina</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Català</a></span>
+                  <span style="display:block;">Espanya</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Čeština</a></span>
+                  <span style="display:block;">Česká republika</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Crnogorski</a></span>
+                  <span style="display:block;">Crna Gora</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Dansk</a></span>
+                  <span style="display:block;">Danmark</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Deutsch</a></span>
+                  <span style="display:block;">Deutschland</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Deutsch</a></span>
+                  <span style="display:block;">Österreich</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Deutsch</a></span>
+                  <span style="display:block;">Schweiz</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Eesti</a></span>
+                  <span style="display:block;">Eesti</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">Australia</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">Canada</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">Guyana</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">India</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">Ireland</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">New Zealand</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">Singapore</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
+                  <span style="display:block;">United Arab Emirates</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Argentina</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Belice</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Bolivia</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Chile</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Colombia</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Costa Rica</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Ecuador</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">El Salvador</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">España</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Estados Unidos</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Guatemala</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Honduras</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Latinoamérica</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">México</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Nicaragua</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Panamá</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Paraguay</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Perú</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Español</a></span>
+                  <span style="display:block;">Venezuela </span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Français</a></span>
+                  <span style="display:block;">Belgique</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Français</a></span>
+                  <span style="display:block;">Canada</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Français</a></span>
+                  <span style="display:block;">France</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Français</a></span>
+                  <span style="display:block;">Suisse</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Gaeilge</a></span>
+                  <span style="display:block;">Éire</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Hrvatski</a></span>
+                  <span style="display:block;">Hrvatska</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">isiXhosa</a></span>
+                  <span style="display:block;">eMzantsi Afrika</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">isiZulu</a></span>
+                  <span style="display:block;">iNingizimu Afrika</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Íslenska</a></span>
+                  <span style="display:block;">Ísland</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Italiano</a></span>
+                  <span style="display:block;">Italia</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Italiano</a></span>
+                  <span style="display:block;">Svizzera</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Kiswahili</a></span>
+                  <span style="display:block;">Āfrika</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Latviešu</a></span>
+                  <span style="display:block;">Latvija</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Lietuvių</a></span>
+                  <span style="display:block;">Lietuva</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Magyar</a></span>
+                  <span style="display:block;">Magyarország</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Malti</a></span>
+                  <span style="display:block;">Malta</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Melayu</a></span>
+                  <span style="display:block;">Malaysia</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Nederlands</a></span>
+                  <span style="display:block;">België</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Nederlands</a></span>
+                  <span style="display:block;">Nederland</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Norsk</a></span>
+                  <span style="display:block;">Norge</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Polski</a></span>
+                  <span style="display:block;">Polska</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Português</a></span>
+                  <span style="display:block;">Brasil</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Português</a></span>
+                  <span style="display:block;">Portugal</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Română</a></span>
+                  <span style="display:block;">România</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Shqip</a></span>
+                  <span style="display:block;">Shqipëri</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Slovenčina</a></span>
+                  <span style="display:block;">Slovensko</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Slovenščina</a></span>
+                  <span style="display:block;">Slovenija</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Srpski</a></span>
+                  <span style="display:block;">Srbija</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Suomi</a></span>
+                  <span style="display:block;">Suomi</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Svenska</a></span>
+                  <span style="display:block;">Sverige</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Tagalog</a></span>
+                  <span style="display:block;">Pilipinas</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Tiếng Việt</a></span>
+                  <span style="display:block;">Việt Nam</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Ελληνικά</a></span>
+                  <span style="display:block;">Ελλάδα</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Български</a></span>
+                  <span style="display:block;">България</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Македонски</a></span>
+                  <span style="display:block;">Северна Македонија</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Русский</a></span>
+                  <span style="display:block;">Россия</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Українська</a></span>
+                  <span style="display:block;">Україна</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">ქართული</a></span>
+                  <span style="display:block;">საქართველო</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Հայերեն</a></span>
+                  <span style="display:block;">Հայաստան</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">עברית</a></span>
+                  <span style="display:block;">ישראל</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">العربية</a></span>
+                  <span style="display:block;">العالم</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">हिन्दी</a></span>
+                  <span style="display:block;">भारत</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">ไทย</a></span>
+                  <span style="display:block;">ประเทศไทย</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">한국어</a></span>
+                  <span style="display:block;">대한민국</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">日本語</a></span>
+                  <span style="display:block;"></span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none"></a></span>
+                  <span style="display:block;">日本</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">简体中文</a></span>
+                  <span style="display:block;">美国</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">繁體中文</a></span>
+                  <span style="display:block;">美國</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">简体中文</a></span>
+                  <span style="display:block;">中国</span>
+                </div>
+                <div class="dil col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">繁體中文</a></span>
+                  <span style="display:block;">香港</span>
+                </div>
+                <div class="dil col"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- DİLLER -->
+
+  <!-- PARA BİRİMLERİ -->
+  <section id="currency" style="font-size: 14px;">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="container">
+            <div class="modal-body">
+              <div class="row">
+                <h4 class="mb-4 fs-3">Bir para birimi seçin</h4>
+                <div class="money col" style="border: 1px solid black; border-radius: 10px;">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Türk lirası</a></span>
+                  <span style="display:block;">TRY – ₺</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Amerikan
+                      doları</a></span>
+                  <span style="display:block;">USD – $</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Avro</a></span>
+                  <span style="display:block;">EUR – €</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Avustralya
+                      doları</a></span>
+                  <span style="display:block;">AUD – $</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">BAE dirhemi</a></span>
+                  <span style="display:block;">AED – ﺩ.ﺇ</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Brezilya
+                      reali</a></span>
+                  <span style="display:block;"> BRL – R$</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Bulgar
+                      levası</a></span>
+                  <span style="display:block;">USD – $</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Danimarka
+                      kronu</a></span>
+                  <span style="display:block;">DKK – kr</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Fas dirhemi</a></span>
+                  <span style="display:block;">MAD</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Filipin
+                      pezosu</a></span>
+                  <span style="display:block;">PHP – ₱.ﺇ</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Güney Afrika
+                      randı</a></span>
+                  <span style="display:block;">ZAR – R</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Güney Kore
+                      vonu</a></span>
+                  <span style="display:block;">KRW – ₩</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Hint rupisi</a></span>
+                  <span style="display:block;">INR – ₹</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Hong Kong
+                      doları</a></span>
+                  <span style="display:block;">HKD – $</span>
+                </div>
+                <div class="money col ">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Hırvat
+                      kunası</a></span>
+                  <span style="display:block;">HRK – knﺇ</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Japon yeni</a></span>
+                  <span style="display:block;">JPY – ¥</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Kanada
+                      doları</a></span>
+                  <span style="display:block;">CAD – $</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Kolombiya
+                      pezosu</a></span>
+                  <span style="display:block;">INR – ₹</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Kosta Rika
+                      kolonu</a></span>
+                  <span style="display:block;">CRC – ₡</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Macar
+                      forinti</a></span>
+                  <span style="display:block;">HUF – Ftﺇ</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Malezya
+                      ringgiti</a></span>
+                  <span style="display:block;">MYR – RM</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Meksika
+                      pezosu</a></span>
+                  <span style="display:block;">MXN – $</span>
+                </div>
+                <div class="money col ">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Norveç
+                      kronu</a></span>
+                  <span style="display:block;">NOK – kr</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Peru solu</a></span>
+                  <span style="display:block;">PEN – S/</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Polonya
+                      zlotisi</a></span>
+                  <span style="display:block;">PLN – złﺇ</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Romanya
+                      leyi</a></span>
+                  <span style="display:block;">RON – lei</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Singapur
+                      doları</a></span>
+                  <span style="display:block;">SGD – $</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Suudi Arabistan
+                      riyali</a></span>
+                  <span style="display:block;">SAR – SR</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Tayland
+                      bahtı</a></span>
+                  <span style="display:block;">THB – ฿/</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Uruguay
+                      pezosu</a></span>
+                  <span style="display:block;">UYU – $Uﺇ</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Yeni Tayvan
+                      doları</a></span>
+                  <span style="display:block;">TWD – $</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Yeni Zelanda
+                      doları</a></span>
+                  <span style="display:block;"> NZD – $</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Çek
+                      korunası</a></span>
+                  <span style="display:block;">CZK – Kč</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Çin yuanı</a></span>
+                  <span style="display:block;">CNY – ￥/</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">İngiliz
+                      sterlini</a></span>
+                  <span style="display:block;">GBP – £ﺇ</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">İsrail yeni
+                      şekeli</a></span>
+                  <span style="display:block;">ILS – ₪</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">İsveç kronu</a></span>
+                  <span style="display:block;">SEK – kr</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">İsviçre
+                      frangı</a></span>
+                  <span style="display:block;">CHF</span>
+                </div>
+                <div class="money col">
+                  <span style="display:block;"><a href="" class="text-black text-decoration-none">Şili pezosu</a></span>
+                  <span style="display:block;">CLP – $/</span>
+                </div>
+                <div class="money col"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- PARA BİRİMLERİ -->
+
+  <!-- DESTEK VE KAYNAKLAR -->
+  <section id="resources">
+    <div class="container-fluid mx-auto fixed-bottom bottom-0">
+      <button type="button" class="btn-close" aria-label="Close" id="resourcesClose"></button>
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col-md-3 mx-7 ">
+            <ul class="list-none">
+              <li class="text-black py-2"><b>Destek</b></li>
+              <li class="py-2"><a href="">Yardım Merkezi</a></li>
+              <li class="py-2"><a href="">AirCover</a></li>
+              <li class="py-2"><a href="">Engelli kişilere destek</a></li>
+              <li class="py-2"><a href="">İptal seçenekleri</a></li>
+              <li class="py-2"><a href="">COVID-19 önlemlerimiz</a></li>
+              <li class="py-2"><a href="">Semtinizdeki sorunu bildirin</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mx-7">
+            <ul class="list-none">
+              <li class="text-black py-2"><b>Topluluk</b></li>
+              <li class="py-2"><a href="">Airbnb.org: afet yardımı</a></li>
+              <li class="py-2"><a href="">Ayrımcılıkla mücadele</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mx-7">
+            <ul class="list-none">
+              <li class="text-black py-2"><b>Ev sahipliği</b></li>
+              <li class="py-2"><a href="">Evinizi Airbnb'ye taşıyın</a></li>
+              <li class="py-2"><a href="">Ev sahipleri için AirCover</a></li>
+              <li class="py-2"><a href="">Ev sahibi kaynaklarını keşfedin</a></li>
+              <li class="py-2"><a href="">Topluluk forumunu ziyaret edin</a></li>
+              <li class="py-2"><a href="">Sorumlu ev sahipliği</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mx-7">
+            <ul class="list-none">
+              <li class="text-black py-2"><b>Airbnb</b></li>
+              <li class="py-2"><a href="">Basın odası</a></li>
+              <li class="py-2"><a href="">Yeni özellikler hakkında bilgi</a></li>
+              <li class="py-2"><a href="">Kurucularımızdan bir mektup</a></li>
+              <li class="py-2"><a href="">Kariyer</a></li>
+              <li class="py-2"><a href="">Yatırımcılar</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- DESTEK VE KAYNAKLAR -->
+
+
+  <!-- FOOTER -->
+  <footer class="footerBar fixed-bottom bottom-0 w-100 py-3 px-4 bg-white d-none d-md-block z-1">
+    <div class="d-flex justify-content-between">
+      <div class="footer-link1 d-flex">
+        <span>© 2023 Airbnb,Inc.</span>
+        <span>
+          <ul class="d-flex">
+            <li class="mx-3">
+              <a href="{% url 'gizlilik' %}">Gizlilik</a>
+            </li>
+            <li class="mx-3">
+              <a href="{% url 'sartlar' %}">Şartlar</a>
+            </li>
+            <li class="mx-3">
+              <a href="{% url 'siteharitasi' %}">Site Haritası</a>
+            </li>
+          </ul>
+        </span>
+      </div>
+      <div class="footer-link2 d-flex">
+        <span>
+          <ul class="d-flex">
+            <li class="mx-3">
+              <i class="bi bi-globe"></i>
+              <button type="button" class="btn1 btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Türkçe
+              </button>
+            </li>
+            <li class="mx-3">
+              <button type="button" class="btn2 btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                ₺ TRY
+              </button>
+            </li>
+            <li class="mx-3">
+              <a class="btn3" href="#">Destek ve kaynaklar</a>
+              <i class="bi bi-chevron-up"></i>
+            </li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FOOTER -->
+  <!--! FOOTER END -->
+
+  <!------------- altLogin------------- -->
+  <div class="login2 d-block d-md-none position-sticky  bottom-0 bg-white">
+    <div class="container-fluid alt-navbar  d-flex justify-content-center">
+      <div class="mx-5 text-center">
+        <i class="fa-solid fa-magnifying-glass d-block mb-2 fs-4"></i>
+        <span class="d-block m-auto">Keşfedin</span>
+      </div>
+
+      <div class="mx-5 text-center">
+        <i class="fa-regular fa-heart  d-block mb-2 fs-4"></i>
+        <span class="d-block m-auto">Favoriler</span>
+      </div>
+
+      <div class="mx-5 text-center">
+        <i class="fa-regular fa-user  d-block mb-2 fs-4"></i>
+        <span class="d-block m-auto">Giriş yap</span>
+      </div>
+    </div>
+  </div>

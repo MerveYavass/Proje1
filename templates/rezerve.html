@@ -1,0 +1,634 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/0f9c5d1ee2.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- My css -->
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+  <!--! Card Detay start -->
+  <div class="container-fluid">
+
+    <div class="cardDetay m-auto mt-4">
+
+      <!-- Card Detay Navbar Start -->
+      <div class="d-none d-md-block">
+        <div class="container-fluid d-flex justify-content-between align-items-center  border-bottom pb-4">
+
+          <div class="align-items-center d-flex cardDetay-logo">
+            <img src="{% static 'img/logo3.jpg' %}" class="d-block" width="50px" alt="">
+            <span>airbnb</span>
+          </div>
+
+          <div class=" m-auto">
+            <button class="justify-content-between  d-flex align-items-center cardDetay-search bg-white">
+              <span class="d-block ">Aramaya başlayın</span>
+              <i class="fa-solid fa-magnifying-glass d-block"></i>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="d-block d-md-none position-sticky top-0">
+        <div class="container-fluid d-flex justify-content-between">
+          <div>
+            <a href="{% url 'index' %}"><i class="fa-solid fa-chevron-left fs-4 bg-secondary-subtle p-3 rounded-pill text-secondary"></i></a>
+          </div>
+
+          <div class="d-flex">
+            <div class="me-5">
+              <a href=""><i class="fa-solid fa-arrow-up-from-bracket fs-4 bg-secondary-subtle p-3 rounded-pill text-secondary"></i></a>
+            </div>
+
+            <div>
+              <a href=""><i class="fa-regular fa-heart fs-4 bg-secondary-subtle p-3 rounded-pill text-secondary"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card Detay End -->
+
+      {% for i in cardDetay %}
+      <!-- Açıklama bölümü ve galeri bölümü-->
+
+      <div class="row mx-1">
+
+        <div class="order-2 order-md-1">
+          <div class="col-12 align-items-center d-flex my-3">
+
+            <i class="bi bi-chevron-left fs-2 d-block me-2"></i>
+            <span class="d-block">Rezervasyon İsteği</span>
+
+          </div>
+
+          <div class="col-12 d-flex justify-content-between">
+            <div class="d-flex ">
+                <span>Seyahatiniz</span>
+                <span>Tarih</span>
+                <span>{{i.girisDate}} ve {{i.cikisDate}}</span>
+            </div>
+
+            <div class="d-none d-md-block">
+              <button class="bg-white border-0">
+                <i class="fa-solid fa-arrow-up-from-bracket "></i>
+                <a class="text-black" href="#">Paylaş</a>
+              </button>
+              <button class="bg-white border-0">
+                <i class="fa-solid fa-heart"></i>
+                <a class="text-black" href="#">Kaydet</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galeri bölümü -->
+        <div class="col-12 mt-3  order-1 order-md-2">
+          <div class="row justify-content-between">
+
+            <div class="col-12 col-md-6 cardDetay-img1 p-0 rounded-3">
+              <img src="{% static 'img/Odalar1.1.jpeg' %}" height="434px" width="100%" class="rounded-start-3" alt="...">
+            </div>
+
+            <div class="col-6 d-none d-md-block">
+              <div class="row">
+                <div class="cardDetay-img1 col-6 mb-3 "> <img src="{% static 'img/Odalar1.1.jpeg' %}" height="210px" width="100%"  alt="..."></div>
+                <div class="cardDetay-img1 col-6 mb-3 "> <img src="{% static 'img/Odalar1.1.jpeg' %}" height="210px" width="100%" class="rounded-end-3" alt="..."></div>
+                <div class="cardDetay-img1 col-6 "> <img src="{% static 'img/Odalar1.1.jpeg' %}" height="210px" width="100%" alt="..."></div>
+                <div class="cardDetay-img1 col-6"> <img src="{% static 'img/Odalar1.1.jpeg' %}" height="210px" width="100%" class="rounded-end-3" alt="..."></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- Profil resmi -->
+      <div class="row mt-5">
+
+        <div class="col-12">
+          <!-- Profil resmi -->
+          <div class="row">
+
+            <div class="col-12 col-md-7 align-items-center d-flex justify-content-between">
+              <p class="fw-semibold fs-4">Kiralık konut içinde bir oda · Ev sahibi:<span>Galdwen</span>
+              </p>
+              <a href="#pp"> <img src="{% static 'img/profil.webp' %}" alt="" width="45px" height="45px"
+                  style="border-radius: 50%;"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- seçenek  -->
+      <div class="row mt-3">
+
+        <div class="col-12 col-md-7">
+          <div class="row justify-content-around align-items-center">
+
+            <div class="col-3 secenek rounded-3">
+
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <p class=" m-0"><i class="fa-solid fa-bed "></i></p>
+                </div>
+                <div class="col-9">
+                  <p class=" m-0">Bir kraliçe yatak</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-3 secenek  rounded-3">
+
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <p class=" m-0"><i class="fa-solid fa-shower"></i></p>
+                </div>
+                <div class="col-9">
+                  <p class=" m-0">ortak banyo</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-3 secenek  rounded-3">
+
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <p class=" m-0"><i class="fa-solid fa-house-user"></i></p>
+                </div>
+                <div class="col-9">
+                  <p class=" m-0">Misafir</p>
+                </div>
+              </div>
+
+            </div>
+
+
+
+          </div>
+          <hr>
+
+          <div class="row mt-4">
+            <div class="col-1">
+              <p class="text-center"><i class="fa-solid fa-people-roof"></i></p>
+            </div>
+            <div class="col-11">
+              <p class="fw-semibold">kiralık konut içinde bir oda</p>
+              <p class="text-secondary">Bir evde kendi odanızın yanı sıra ortak alanlara erişim.</p>
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-1">
+              <p class="text-center"><i class="fa-solid fa-display"></i></i></p>
+            </div>
+            <div class="col-11">
+              <p class="fw-semibold">Özel çalışma alanı</p>
+              <p class="text-secondary">Çalışmak için uygun, wifi bağlantısı olan bir oda.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <p class="text-center"><i class="fa-solid fa-display"></i></i></p>
+            </div>
+            <div class="col-11">
+              <p class="fw-semibold">Golwen Süper Ev Sahibiı</p>
+              <p class="text-secondary">Süper Ev Sahipleri, kendilerini misafirler için mükemmel
+                konaklamalar sunmaya adamış deneyimli, yüksek puanlı ev sahipleridir.</p>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-3">
+                  <img src="{% static 'img/detay6.webp' %}" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <p>Her rezervasyon ev sahibi iptallerine, kayıt hatalarına ve girişle ilgili problemler gibi
+                diğer sorunlara karşı ücretsiz olarak koruma altındadır.</p>
+              <a href="#">Daha fazla bilgi edinin</a>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row my-4">
+            <div class="col-12">
+              <i class="fa-solid fa-language"></i> <span>Bazı bilgiler otomatik olarak çevrilmiştir. <a
+                  class="text-black fw-semibold" href="#">Orijinal dilde göster</a></span>
+            </div>
+          </div>
+
+          <hr>
+          <!-- Ev sahibinizle tanışın -->
+          <h3 class="mb-4">Ev sahibinizle tanışın.</h3>
+
+          <div class="row mt-5 evSahibi" id="pp">
+
+            <div class="col-7 m-auto">
+
+              <div class="row mt-4">
+
+                <div class="col-12">
+
+                  <div class="row ev-sahibi-card">
+                    <!-- Resim ksımı -->
+                    <div class="col-8 align-self-center">
+                      <div class="row ">
+                        <div class="col-12 text-center">
+                          <img src="{% static 'img/profil.webp' %}" width="120px" height="120px"
+                            class="img-fluid rounded-pill" alt="">
+                        </div>
+                        <div class="col-12 text-center mt-2">
+                          <h1>Golwen</h1>
+                          <p class="fw-bolder">Süper Ev sahibi</p>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-4">
+                      <div>
+                        <p class="fs-5 fw-bolder">28</p>
+                        <p class="evsahibi-p">Değerlendirme</p>
+                        <hr>
+                      </div>
+
+                      <div>
+                        <p class="fs-5 fw-bolder">4.93 <i class="fa-solid fa-star"></i></p>
+                        <p class="evsahibi-p">Puanlama</p>
+                        <hr>
+                      </div>
+
+                      <div>
+                        <p class="fs-5 fw-bolder">9</p>
+                        <p class="evsahibi-p">Aydır evsahibi</p>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  <div class="mt-3 ">
+                    <p><i class="fa-solid fa-suitcase"></i> Yaptığım iş: İşletme sahibi</p>
+                    <p><i class="fa-solid fa-music"></i> Lisede en sevdiğim şarkı: One U2</p>
+                    <p><i class="fa-solid fa-clock"></i> Gereğinden fazla zaman harcadığım şey:
+                      Zanaat, seyahat, motor sporlarım</p>
+                    <p><i class="fa-solid fa-star-of-life"></i> Evimi benzersiz kılan şey: Eski ve
+                      dekorun cazibesi</p>
+                    <p><i class="fa-solid fa-paw"></i> Evcil hayvanlarım: Kediler</p>
+                    <a class="text-black" href="#">Daha fazlasını göster <i class="fa-solid fa-chevron-right"></i></a>
+                  </div>
+
+                  <hr>
+
+                </div>
+                <button class="bg-black text-white rounded-2 p-2 fs-5 mb-3 w-75">Ev Sahibine Mesaj
+                  Gönder</button>
+                <hr>
+                <small>Ödeme güvenliği açısından asla Airbnb web sitesi veya uygulaması dışında para
+                  havalesi yapmayın ve iletişime girmeyin.</small>
+              </div>
+
+
+            </div>
+          </div>
+
+          <h4 class="mt-4">Bu yer hakkında</h4>
+          <p>Varese'deki en seçkin yerleşim bölgelerinden biri olan Sant'Ambrogio'da büyük park, teras ve
+            balkonlara sahip zarif villa. Sacred Mountain'a (Unesco Heritage) arabayla 10 dakika, yürüyüş ve
+            bisiklet gezintileri için ideal yerler olan Campo dei Fiori'ye (1200 metre) 20 dakika
+            mesafededir. Varese'nin tarihi merkezine iyi bağlantı: 200 metre uzaklıktaki otobüs durağı.</p>
+          <a class="text-black fw-semibold" href="#">Daha fazlasını göster <i class="fa-solid fa-chevron-right"></i></a>
+
+          <hr class="mt-4">
+          <!-- sunulan imkanlar -->
+          <h4>Bu mekân size neler sunuyor?</h4>
+
+          <div class="row mb-5">
+            <div class="col-6">
+              <p>Bahçe manzarası</p>
+              <p> <i class="fa-solid fa-wifi"></i> Hızlı wifi: 60 Mbps</p>
+              <p><i class="fa-solid fa-square-parking"></i> Binada ücretsiz otopark</p>
+              <p>Binada çamaşır makinesi (Ücretsiz)</p>
+              <p>Karbonmonoksit alarmı</p>
+              <button class="p-2 bg-white rounded-2">50 olanağın hepsini göster</button>
+            </div>
+            <div class="col-6">
+              <p><i class="fa-solid fa-kitchen-set"></i> Mutfak</p>
+              <p>Özel çalışma alanı</p>
+              <p><i class="fa-solid fa-tv"></i> HDTV ve standart kablo</p>
+              <p>Yatak odası kapısında kilit</p>
+              <p>Duman dedektörü</p>
+            </div>
+
+
+          </div>
+          <hr>
+          <!-- Takvim -->
+          <h4>Varese bölgesinde 6 gece</h4>
+
+          <img src="{% static 'img/takvim.png' %}" class="img-fluid" alt="">
+
+        </div>
+
+        <!--! Sticy sayfası -->
+        <div class="col-4 ms-5 bg-white sticky-img d-none d-md-block">
+          
+            <div class="d-flex justify-content-between align-items-center mt-4 ">
+              <p><span class="fw-bolder fs-5">{{i.fiyat}}</span> ₺ gece</p>
+              <p><i class="fa-solid fa-star"></i>{{i.puan}}·<a class="text-secondary" href="#">35 değerlendirme</a></p>
+            </div>
+       
+
+            <!-- <div class="row misafir-ekle m-auto justify-content-center rounded-3">
+              <div class="col-5 rounded-top-2">
+                  <span>Giriş</span>
+                  <span class="d-block">{{i.girisDate}}</span>
+              </div>
+            
+              <div class="col-5 rounded-top-2">
+                  <span>Çıkış</span>
+                  <span class="d-block">{{i.cikisDate}}</span>
+              </div>
+            </div> -->
+
+          <div class="rezerve-pencere" id="rezerveModal">
+            <form action="" method="POST">
+              {% csrf_token %}
+              <input type="hidden" name="cardId" value="{{i.id}}">
+              <div class="row misafir-ekle m-auto justify-content-center rounded-3">
+                <div class="giris col-5 rounded-top-2" onclick="openModal('rezerveModal')">
+                  <span>Giriş</span>
+                  <span class="d-block">{{i.girisDate}}</span>
+                  <input type="date" name="girisDate" value="YYYY-MM-DD" required>
+                </div>
+          
+                <div class="cikis col-5 rounded-top-2" onclick="openModal('rezerveModal')">
+                  <span>Çıkış</span>
+                  <span class="d-block">{{i.cikisDate}}</span>
+                  <input type="date" name="cikisDate" value="YYYY-MM-DD" required>
+                </div>
+              </div>
+              <a href="{% url 'pay' %}">
+                Rezerve edin
+              </a>
+            </form>
+          </div>
+          
+          
+
+          <div class="col-8 m-auto mt-3 fw-lighter">
+            <p>Henüz sizden tahsilat yapılmayacak</p>
+          </div>
+
+          <div class="col-10 m-auto">
+            <div class="d-flex justify-content-between">
+              <a class="text-black fw-light" href="#">{{i.fiyat}} x 5 gece</a>
+              <p>2.680 ₺</p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <a class="text-black fw-light" href="#">Temizlik ücreti</a>
+              <p>118 ₺</p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <a class="text-black fw-light" href="#">Airbnb hizmet bedeli</a>
+              <p>466 ₺</p>
+            </div>
+
+            <hr>
+
+            <div class="d-flex justify-content-between">
+              <p class="fw-bolder">Vergiler hariç toplam</p>
+              <p class="fw-bolder">3.264 ₺</p>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+      {% endfor %}
+      <!-- Derecelendirme -->
+      <img src="{% static 'img/detay8.png' %}" alt="">
+
+      <!-- Yorumlar -->
+      <hr>
+      <div class="row">
+        <div class="col-6 mt-3 align-items-center ">
+          <div class="row">
+            <div class="col-2">
+              <img src="{% static 'img/detay3.webp' %}" height="70px" width="70px" class="rounded-pill " alt="">
+            </div>
+
+            <div class="col-10 text-start mt-1">
+              <p class="fw-bold">Terrizzi</p>
+              <p class="text-secondary">Nisan 2023</p>
+            </div>
+          </div>
+
+          <p>Madam Valentina'nın evi çok güzel. Şıklığı ve müziği dert ediyor. Valentina ile telefonla çok
+            iletişim kurduk ve her zaman müsaitti.</p>
+          <a class="text-black fw-semibold" href="#">Daha fazlasını göster <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+        <div class="col-6 mt-3 align-items-center ">
+          <div class="row">
+            <div class="col-2">
+              <img src="{% static 'img/yorum2.webp' %}" height="70px" width="70px" class="rounded-pill " alt="">
+            </div>
+
+            <div class="col-10 text-start mt-1">
+              <p class="fw-bold">Terrizzi</p>
+              <p class="text-secondary">Nisan 2023</p>
+            </div>
+          </div>
+
+          <p>Madam Valentina'nın evi çok güzel. Şıklığı ve müziği dert ediyor. Valentina ile telefonla çok
+            iletişim kurduk ve her zaman müsaitti.</p>
+          <a class="text-black fw-semibold" href="#">Daha fazlasını göster <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+        <div class="col-6 mt-3 align-items-center ">
+          <div class="row">
+            <div class="col-2">
+              <img src="{% static 'img/yorum2.webp' %}" height="70px" width="70px" class="rounded-pill " alt="">
+            </div>
+
+            <div class="col-10 text-start mt-1">
+              <p class="fw-bold">Terrizzi</p>
+              <p class="text-secondary">Nisan 2023</p>
+            </div>
+          </div>
+
+          <p>Madam Valentina'nın evi çok güzel. Şıklığı ve müziği dert ediyor. Valentina ile telefonla çok
+            iletişim kurduk ve her zaman müsaitti.</p>
+          <a class="text-black fw-semibold" href="#">Daha fazlasını göster <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+
+        <div class="col-6 mt-3 align-items-center ">
+          <div class="row">
+            <div class="col-2">
+              <img src="{% static 'img/yorum.webp' %}" height="70px" width="70px" class="rounded-pill " alt="">
+            </div>
+
+            <div class="col-10 text-start mt-1">
+              <p class="fw-bold">Terrizzi</p>
+              <p class="text-secondary">Nisan 2023</p>
+            </div>
+          </div>
+
+          <p>Madam Valentina'nın evi çok güzel. Şıklığı ve müziği dert ediyor. Valentina ile telefonla çok
+            iletişim kurduk ve her zaman müsaitti.</p>
+          <a class="text-black fw-semibold" href="#">Daha fazlasını göster <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+
+
+      </div>
+
+      <hr>
+
+      <div>
+        <h4 class="mb-4 mt-5">Nerede Olacaksınız ?</h4>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200065.91038004076!2d27.07971705!3d38.41767505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd862a762cacd%3A0x628cbba1a59ce8fe!2zxLB6bWly!5e0!3m2!1str!2str!4v1683550284427!5m2!1str!2str"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <hr class="mt-5 mb-4">
+    </div>
+
+  </div>
+
+  <!-- detay footer -->
+  <section class="gizlilik-footer bg-light mt-5">
+    <div class="container mx-auto">
+      <div class="row pt-5">
+        <div class="col-md-3 mx-7 ">
+          <ul class="list-none">
+            <li class="text-black py-2">Destek</li>
+            <li class="py-2"><a href="">Yardım Merkezi</a></li>
+            <li class="py-2"><a href="">AirCover</a></li>
+            <li class="py-2"><a href="">Engelli kişilere destek</a></li>
+            <li class="py-2"><a href="">İptal seçenekleri</a></li>
+            <li class="py-2"><a href="">COVID-19 önlemlerimiz</a></li>
+            <li class="py-2"><a href="">Semtinizdeki sorunu bildirin</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mx-7">
+          <ul class="list-none">
+            <li class="text-black py-2">Topluluk</li>
+            <li class="py-2"><a href="">Airbnb.org: afet yardımı</a></li>
+            <li class="py-2"><a href="">Ayrımcılıkla mücadele</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mx-7">
+          <ul class="list-none">
+            <li class="text-black py-2">Ev sahipliği</li>
+            <li class="py-2"><a href="">Evinizi Airbnb'ye taşıyın</a></li>
+            <li class="py-2"><a href="">Ev sahipleri için AirCover</a></li>
+            <li class="py-2"><a href="">Ev sahibi kaynaklarını keşfedin</a></li>
+            <li class="py-2"><a href="">Topluluk forumunu ziyaret edin</a></li>
+            <li class="py-2"><a href="">Sorumlu ev sahipliği</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mx-7">
+          <ul class="list-none">
+            <li class="text-black py-2">Airbnb</li>
+            <li class="py-2"><a href="">Basın odası</a></li>
+            <li class="py-2"><a href="">Yeni özellikler hakkında bilgi</a></li>
+            <li class="py-2"><a href="">Kurucularımızdan bir mektup</a></li>
+            <li class="py-2"><a href="">Kariyer</a></li>
+            <li class="py-2"><a href="">Yatırımcılar</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Birbirini ayıran çizgiler -->
+      <div class="container">
+        <div class="line"></div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex justify-content-between mt-5">
+          <div class="footer-link1 d-flex">
+            <span>© 2023 Airbnb,Inc.</span>
+            <span>
+              <ul class="d-flex">
+                <li class="mx-3">
+                  <a href="">Gizlilik</a>
+                </li>
+                <li class="mx-3">
+                  <a href="">Şartlar</a>
+                </li>
+                <li class="mx-3">
+                  <a href="">Site Haritası</a>
+                </li>
+              </ul>
+            </span>
+          </div>
+          <div class="footer-link2 d-flex">
+            <span>
+              <ul class="d-flex">
+                <li class="mx-3">
+                  <i class="bi bi-globe"></i>
+                  <button type="button" class="btn1 btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Türkçe
+                  </button>
+                </li>
+                <li class="mx-3">
+                  <button type="button" class="btn2 btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    ₺ TRY
+                  </button>
+                </li>
+                <li class="mx-3">
+                  <a class="btn3" href="#">Destek ve kaynaklar</a>
+                  <i class="bi bi-chevron-up"></i>
+                </li>
+              </ul>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- detay footer -->
+
+
+  <!--! Card Detay End -->
+  <!-- My Js -->
+  <script src="{% static 'main.js' %}"></script>
+
+  <!-- Jquery Js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <!-- Bootstrap Js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

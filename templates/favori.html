@@ -1,0 +1,123 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+{% include "includes/_navbar3.html" %}
+
+<div class="container">
+    <h1>Favoriler</h1>
+    {% if uzunluk == 0 %}
+    <h2>Favori bulunmamaktadır...</h2>
+    {% else %}
+
+    <div class="row">
+        {% for card in begeni %}
+        <div class="ayri col-12 col-sm-6 col-md-4 col-lg-3 ">
+
+
+            <div class="card border-0">
+                <div class="card-body border-0">
+
+                    <div id="{{ card.id }}" class="carousel slide">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1" style="width: 5px;height: 5px;"></button>
+                            <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="1"
+                                aria-label="Slide 2" style="width: 5px;height: 5px;"></button>
+                            <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="2"
+                                aria-label="Slide 3" style="width: 5px;height: 5px;"></button>
+                            <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="3"
+                                aria-label="Slide 4" style="width: 5px;height: 5px;"></button>
+                            <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="4"
+                                aria-label="Slide 5" style="width: 5px;height: 5px;"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <a href="{% url 'cardDetay' card.id %}"> <img src="{{ card.resim1.url }}"
+                                        class="d-block w-100" alt="" style="height: 250px; object-fit: cover;"> </a>
+                            </div>
+
+                            <div class="carousel-item">
+                                <a href="{% url 'cardDetay' card.id %}"> <img src="{{ card.resim2.url }}"
+                                        class="d-block w-100" alt="" style="height: 250px; object-fit: cover;"></a>
+                            </div>
+
+                            <div class="carousel-item">
+                                <a href="{% url 'cardDetay' card.id %}"><img src="{{ card.resim3.url }}"
+                                        class="d-block w-100" alt="" style="height: 250px; object-fit: cover;"></a>
+                            </div>
+
+                            <div class="carousel-item">
+                                <a href="{% url 'cardDetay' card.id %}"><img src="{{ card.resim4.url }}"
+                                        class="d-block w-100" alt="" style="height: 250px; object-fit: cover;"></a>
+                            </div>
+
+                            <div class="carousel-item">
+                                <a href="{% url 'cardDetay' card.id %}"> <img src="{{ card.resim5.url }}"
+                                        class="d-block w-100" alt="" style="height: 250px; object-fit: cover;"></a>
+                            </div>
+                        </div>
+
+                        {% if user.is_authenticated %}
+                        <form method="POST" action="">
+                            {% csrf_token %}
+                            <input type="hidden" name="cardId" value="{{card.id}}">
+                            <button name="begen" type="submit" {% if request.user in post.like.all %} class="likebutton"
+                                {% else %} class='likebuttonkirmizi' {% endif %}>
+                                <i class="fa-solid fa-heart fs-3"></i>
+                            </button>
+                        </form>
+                        {% else %}
+                        <a class="likebutton" href="{% url 'register' %}"><i class="fa-solid fa-heart fs-3"></i></a>
+                        {% endif %}
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#{{ card.id }}"
+                            data-bs-slide="prev">
+                            <span> <i class="fa-solid fa-circle-chevron-left" style="font-size: x-large;"></i></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#{{ card.id }}"
+                            data-bs-slide="next">
+                            <span> <i class="fa-solid fa-circle-chevron-right" style="font-size: x-large;"></i></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+
+                    <div class="container-fluid mt-3">
+                        <div class="row">
+                            <div class="col-9">
+                                <h3>
+                                    <b class="fs-5">
+                                        {{ card.adress }}
+                                    </b>
+                                </h3>
+                                <h6 class="card-subtitle mb-2 text-body-secondary fs-5">
+                                    {{ card.aciklama }}
+                                </h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary fs-5">
+                                    {{ card.girisDate|date:"d F" }} - {{ card.cikisDate|date:"d F" }}
+                                </h6>
+                                <p class="card-text fs-5"> <span class="fw-bold text-black">{{ card.fiyat }} </span>₺
+                                    gece</p>
+                            </div>
+                            <div class="col-3">
+                                <i class="fa-sharp fa-solid fa-star" style="color: #222222; font-size: 14px;"><span>5,0
+                                    </span></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}

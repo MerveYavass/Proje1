@@ -1,0 +1,83 @@
+{% load static %}
+<!-- FOOTER -->
+<div class="container-fluid mt-5 ">
+    <div class="row mb-3">
+        <div class="col-md-3 col-12 mx-7 ">
+            <ul class="list-none">
+                <li class="text-black py-2"><b>Destek</b></li>
+                <li class="py-2"><a href="">Yardım Merkezi</a></li>
+                <li class="py-2"><a href="">AirCover</a></li>
+                <li class="py-2"><a href="">Engelli kişilere destek</a></li>
+                <li class="py-2"><a href="">İptal seçenekleri</a></li>
+                <li class="py-2"><a href="">COVID-19 önlemlerimiz</a></li>
+                <li class="py-2"><a href="">Semtinizdeki sorunu bildirin</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-12 mx-7">
+            <ul class="list-none">
+                <li class="text-black py-2"><b>Topluluk</b></li>
+                <li class="py-2"><a href="">Airbnb.org: afet yardımı</a></li>
+                <li class="py-2"><a href="">Ayrımcılıkla mücadele</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-12 mx-7">
+            <ul class="list-none">
+                <li class="text-black py-2"><b>Ev sahipliği</b></li>
+                <li class="py-2"><a href="">Evinizi Airbnb'ye taşıyın</a></li>
+                <li class="py-2"><a href="">Ev sahipleri için AirCover</a></li>
+                <li class="py-2"><a href="">Ev sahibi kaynaklarını keşfedin</a></li>
+                <li class="py-2"><a href="">Topluluk forumunu ziyaret edin</a></li>
+                <li class="py-2"><a href="">Sorumlu ev sahipliği</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-12 mx-7">
+            <ul class="list-none">
+                <li class="text-black py-2"><b>Airbnb</b></li>
+                <li class="py-2"><a href="">Basın odası</a></li>
+                <li class="py-2"><a href="">Yeni özellikler hakkında bilgi</a></li>
+                <li class="py-2"><a href="">Kurucularımızdan bir mektup</a></li>
+                <li class="py-2"><a href="">Kariyer</a></li>
+                <li class="py-2"><a href="">Yatırımcılar</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <ul class="d-flex">
+                <li class="mx-3">
+                    <a href="{% url 'gizlilik' %}">Gizlilik</a>
+                </li>
+                <li class="mx-3">
+                    <a href="{% url 'sartlar' %}">Şartlar</a>
+                </li>
+                <li class="mx-3">
+                    <a href="{% url 'siteharitasi' %}">Site Haritası</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-12">
+            <ul class="d-flex justify-content-end">
+                <li class="mx-3">
+                    <i class="bi bi-globe"></i>
+                    <button type="button" class="btn1 btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Türkçe
+                    </button>
+                </li>
+                <li class="mx-3">
+                    <button type="button" class="btn2 btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        ₺ TRY
+                    </button>
+                </li>
+                <li class="mx-3">
+                    <a class="btn3" href="#" onclick="goToLink('facebook')"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a class="btn3" href="#" onclick="goToLink('twitter')"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a class="btn3" href="#" onclick="goToLink('instagram')"><i class="fa-brands fa-square-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- FOOTER -->

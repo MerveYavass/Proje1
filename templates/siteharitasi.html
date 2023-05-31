@@ -1,0 +1,509 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://kit.fontawesome.com/de5b8d2543.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <!--! Site Haritası Header -->
+    <div class="d-none d-md-block">
+        <div class="container-fluid mt-3 d-flex justify-content-between align-items-center pb-4 ">
+          <!-- Yardım Merkezi Logo -->
+          <div class="align-items-center d-flex cardDetay-logo">
+            <a href="{% url 'index' %}"><img src="/static/img/logo3.jpg" class="d-block" width="50px" alt=""></a>
+          </div>
+  
+          <div class="d-flex align-items-center">
+  
+            <a class="text-decoration-none text-black me-2" href="">Ev sahipliği yapın</a>
+            <a class="text-decoration-none text-black me-2" href="">Kaydolun</a>
+            <a class="text-decoration-none text-black me-2" href="">Oturum açım</a>
+
+          </div>
+  
+        </div>
+      </div>
+    <!--! Site Haritası Header -->
+
+
+
+    <!--! Site Haritası Header Altında Kalan İki Satırlık Kısım -->
+    <section class="header-bottom ms-5">
+        <div class="container-fluid">
+            <div class="row d-flex">
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap" style="border-bottom: 1px solid gray;">Destinations</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Categories</a> 
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Stays by Type</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Airbnb Luxe Destinations</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Airbnb Luxe</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Airbnb Monthly Stays Destinations</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Experiences</a>
+                </div>
+            </div>
+
+            <div class="row d-flex mt-3">
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Experiences by Location & Type</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Localized Sites</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Custom Landing Pages</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Help Center pages</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Resource Center pages</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none flex-nowrap">Most Common Pages</a>
+                </div>
+                <div class="col">
+                    <a href="" class="text-decoration-none ">Things to do</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--! Site Haritası Header Altında Kalan İki Satırlık Kısım -->
+
+    <hr class="text-secondary">
+
+    <!--! Top Destinations Bölümü-->
+    <section class="top-destinations">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="destination-link col-md-3 col-12 d-flex flex-column gap-4">
+                    <a href="" class="text-black">Vacation rentals & Homes in A Coruña</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Abidjan</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Addis Ababa</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Aix-en-Provence</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Albufeira</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Alghero</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Alsace</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Amman</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Anapoima</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Andros</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Antibes</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Apulia</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Arcachon</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Armenia</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Athens</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Augsburg</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Aveiro</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Bacalar</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Baku</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Bangkok</a>
+                </div>
+                <div class="destination-link col-md-3 col-12 d-flex flex-column gap-4">
+                    <a href="" class="text-black">Vacation rentals & Homes in Aachen</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Abu Dhabi</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Adelaide</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Alaska</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Alcúdia</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Alicante</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Altea</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Amsterdam</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Andalusia</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Anguilla</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Antigua Guatemala</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Arb</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Arequipa</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Aruba</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Atlanta</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Austin</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Avignon</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Baden-Baden</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Bali</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Bansko</a>
+                </div>
+                <div class="destination-link col-md-3 col-12 d-flex flex-column gap-4">
+                    <a href="" class="text-black">Vacation rentals & Homes in Aarhus</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Acapulco</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Aegina</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Albania</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Alexandria</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Almaty</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Amalfi</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in AmsterdamCent</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Andorra</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Anna MariaIsland</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Antigua andBar</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Arbin</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Argentina</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Aspen</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Atlantic Ocean</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Australia</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Ayia Napa</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Baguio</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in BalneárioCambo</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Barbados</a>
+                </div>
+                <div class="destination-link col-md-3 col-12 d-flex flex-column gap-4">
+                    <a href="" class="text-black">Vacation rentals & Homes in Aberdeen</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Accra</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Agadir</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Alberta</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Algeria</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Almería</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Amalfi Coast</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Anaheim</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Andorra la Vella</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Annecy</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Antwerp</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Arbon</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Armação dos Búzios</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Asunción</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Auckland</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Austria</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Azores</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Bahrain</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Banff</a>
+                    <a href="" class="text-black">Vacation rentals & Homes in Barcelona</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--! Top Destinations Bölümü-->
+
+    <section class="more-destination container mt-5">
+        <div class="row">
+            <div class="col-10 col-sm-12 m-auto">
+            <h4 class="mt-5 mb-4"><strong>More Destinations</strong></h4>
+                <div class="d-flex justify-content-between">
+                    <div class="col number"><a href="" class="text-black">0</a></div>
+                    <div class="col number"><a href="" class="text-black">1</a></div>
+                    <div class="col number"><a href="" class="text-black">2</a></div>
+                    <div class="col number"><a href="" class="text-black">3</a></div>
+                    <div class="col number"><a href="" class="text-black">4</a></div>
+                    <div class="col number"><a href="" class="text-black">5</a></div>
+                    <div class="col number"><a href="" class="text-black">6</a></div>
+                    <div class="col number"><a href="" class="text-black">7</a></div>
+                    <div class="col number"><a href="" class="text-black">8</a></div>
+                    <div class="col number"><a href="" class="text-black">9</a></div>
+                    <div class="col number"><a href="" class="text-black">10</a></div>
+                    <div class="col number"><a href="" class="text-black">11</a></div>
+                    <div class="col number"><a href="" class="text-black">12</a></div>
+                    <div class="col number"><a href="" class="text-black">13</a></div>
+                    <div class="col number"><a href="" class="text-black">14</a></div>
+                    <div class="col number"><a href="" class="text-black">15</a></div>
+                    <div class="col number"><a href="" class="text-black">16</a></div>
+                    <div class="col number"><a href="" class="text-black">17</a></div>
+                    <div class="col number"><a href="" class="text-black">18</a></div>
+                    <div class="col number"><a href="" class="text-black">19</a></div>
+                    <div class="col number"><a href="" class="text-black">20</a></div>
+                    <div class="col number"><a href="" class="text-black">21</a></div>
+                    <div class="col number"><a href="" class="text-black">22</a></div>
+                    <div class="col number"><a href="" class="text-black">23</a></div>
+                </div>
+            </div>
+            <div class="col-sm-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <div class="col number"><a href="" class="text-black">24</a></div>
+                    <div class="col number"><a href="" class="text-black">25</a></div>
+                    <div class="col number"><a href="" class="text-black">26</a></div>
+                    <div class="col number"><a href="" class="text-black">27</a></div>
+                    <div class="col number"><a href="" class="text-black">28</a></div>
+                    <div class="col number"><a href="" class="text-black">29</a></div>
+                    <div class="col number"><a href="" class="text-black">30</a></div>
+                    <div class="col number"><a href="" class="text-black">31</a></div>
+                    <div class="col number"><a href="" class="text-black">32</a></div>
+                    <div class="col number"><a href="" class="text-black">33</a></div>
+                    <div class="col number"><a href="" class="text-black">34</a></div>
+                    <div class="col number"><a href="" class="text-black">35</a></div>
+                    <div class="col number"><a href="" class="text-black">36</a></div>
+                    <div class="col number"><a href="" class="text-black">37</a></div>
+                    <div class="col number"><a href="" class="text-black">38</a></div>
+                    <div class="col number"><a href="" class="text-black">39</a></div>
+                    <div class="col number"><a href="" class="text-black">40</a></div>
+                    <div class="col number"><a href="" class="text-black">41</a></div>
+                    <div class="col number"><a href="" class="text-black">42</a></div>
+                    <div class="col number"><a href="" class="text-black">43</a></div>
+                    <div class="col number"><a href="" class="text-black">44</a></div>
+                    <div class="col number"><a href="" class="text-black">45</a></div>
+                    <div class="col number"><a href="" class="text-black">46</a></div>
+                    <div class="col number"><a href="" class="text-black">47</a></div>
+                </div>
+            </div>
+            <div class="col-sm-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <div class="col number"><a href="" class="text-black">48</a></div>
+                    <div class="col number"><a href="" class="text-black">49</a></div>
+                    <div class="col number"><a href="" class="text-black">50</a></div>
+                    <div class="col number"><a href="" class="text-black">51</a></div>
+                    <div class="col number"><a href="" class="text-black">52</a></div>
+                    <div class="col number"><a href="" class="text-black">53</a></div>
+                    <div class="col number"><a href="" class="text-black">54</a></div>
+                    <div class="col number"><a href="" class="text-black">55</a></div>
+                    <div class="col number"><a href="" class="text-black">56</a></div>
+                    <div class="col number"><a href="" class="text-black">57</a></div>
+                    <div class="col number"><a href="" class="text-black">58</a></div>
+                    <div class="col number"><a href="" class="text-black">59</a></div>
+                    <div class="col number"><a href="" class="text-black">60</a></div>
+                    <div class="col number"><a href="" class="text-black">61</a></div>
+                    <div class="col number"><a href="" class="text-black">62</a></div>
+                    <div class="col number"><a href="" class="text-black">63</a></div>
+                    <div class="col number"><a href="" class="text-black">64</a></div>
+                    <div class="col number"><a href="" class="text-black">65</a></div>
+                    <div class="col number"><a href="" class="text-black">66</a></div>
+                    <div class="col number"><a href="" class="text-black">67</a></div>
+                    <div class="col number"><a href="" class="text-black">68</a></div>
+                    <div class="col number"><a href="" class="text-black">69</a></div>
+                    <div class="col number"><a href="" class="text-black">70</a></div>
+                    <div class="col number"><a href="" class="text-black">71</a></div>
+                </div>
+            </div>
+            <div class="col-sm-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <div class="col number"><a href="" class="text-black">72</a></div>
+                    <div class="col number"><a href="" class="text-black">73</a></div>
+                    <div class="col number"><a href="" class="text-black">74</a></div>
+                    <div class="col number"><a href="" class="text-black">75</a></div>
+                    <div class="col number"><a href="" class="text-black">76</a></div>
+                    <div class="col number"><a href="" class="text-black">77</a></div>
+                    <div class="col number"><a href="" class="text-black">78</a></div>
+                    <div class="col number"><a href="" class="text-black">79</a></div>
+                    <div class="col number"><a href="" class="text-black">80</a></div>
+                    <div class="col number"><a href="" class="text-black">81</a></div>
+                    <div class="col number"><a href="" class="text-black">82</a></div>
+                    <div class="col number"><a href="" class="text-black">83</a></div>
+                    <div class="col number"><a href="" class="text-black">84</a></div>
+                    <div class="col number"><a href="" class="text-black">85</a></div>
+                    <div class="col number"><a href="" class="text-black">86</a></div>
+                    <div class="col number"><a href="" class="text-black">87</a></div>
+                    <div class="col number"><a href="" class="text-black">88</a></div>
+                    <div class="col number"><a href="" class="text-black">89</a></div>
+                    <div class="col number"><a href="" class="text-black">90</a></div>
+                    <div class="col number"><a href="" class="text-black">91</a></div>
+                    <div class="col number"><a href="" class="text-black">92</a></div>
+                    <div class="col number"><a href="" class="text-black">93</a></div>
+                    <div class="col number"><a href="" class="text-black">94</a></div>
+                    <div class="col number"><a href="" class="text-black">95</a></div>
+                </div>
+            </div>
+            <div class="col-sm-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <div class="col number"><a href="" class="text-black">96</a></div>
+                    <div class="col number"><a href="" class="text-black">97</a></div>
+                    <div class="col number"><a href="" class="text-black">98</a></div>
+                    <div class="col number"><a href="" class="text-black">99</a></div>
+                    <div class="col number"><a href="" class="text-black">100</a></div>
+                    <div class="col number"><a href="" class="text-black">101</a></div>
+                    <div class="col number"><a href="" class="text-black">102</a></div>
+                    <div class="col number"><a href="" class="text-black">103</a></div>
+                    <div class="col number"><a href="" class="text-black">104</a></div>
+                    <div class="col number"><a href="" class="text-black">105</a></div>
+                    <div class="col number"><a href="" class="text-black">106</a></div>
+                    <div class="col number"><a href="" class="text-black">107</a></div>
+                    <div class="col number"><a href="" class="text-black">108</a></div>
+                    <div class="col number"><a href="" class="text-black">109</a></div>
+                    <div class="col number"><a href="" class="text-black">110</a></div>
+                    <div class="col number"><a href="" class="text-black">111</a></div>
+                    <div class="col number"><a href="" class="text-black">112</a></div>
+                    <div class="col number"><a href="" class="text-black">113</a></div>
+                    <div class="col number"><a href="" class="text-black">114</a></div>
+                    <div class="col number"><a href="" class="text-black">115</a></div>
+                    <div class="col number"><a href="" class="text-black">116</a></div>
+                    <div class="col number"><a href="" class="text-black">117</a></div>
+                    <div class="col number"><a href="" class="text-black">118</a></div>
+                    <div class="col number"><a href="" class="text-black">119</a></div>
+                </div>
+            </div>
+            <div class="col-sm-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <div class="col number"><a href="" class="text-black">120</a></div>
+                    <div class="col number"><a href="" class="text-black">121</a></div>
+                    <div class="col number"><a href="" class="text-black">122</a></div>
+                    <div class="col number"><a href="" class="text-black">123</a></div>
+                    <div class="col number"><a href="" class="text-black">124</a></div>
+                    <div class="col number"><a href="" class="text-black">125</a></div>
+                    <div class="col number"><a href="" class="text-black">126</a></div>
+                    <div class="col number"><a href="" class="text-black">127</a></div>
+                    <div class="col number"><a href="" class="text-black">128</a></div>
+                    <div class="col number"><a href="" class="text-black">129</a></div>
+                    <div class="col number"><a href="" class="text-black">130</a></div>
+                    <div class="col number"><a href="" class="text-black">131</a></div>
+                    <div class="col number"><a href="" class="text-black">132</a></div>
+                    <div class="col number"><a href="" class="text-black">133</a></div>
+                    <div class="col number"><a href="" class="text-black">134</a></div>
+                    <div class="col number"><a href="" class="text-black">135</a></div>
+                    <div class="col number"><a href="" class="text-black">136</a></div>
+                    <div class="col number"><a href="" class="text-black">137</a></div>
+                    <div class="col number"><a href="" class="text-black">138</a></div>
+                    <div class="col number"><a href="" class="text-black">139</a></div>
+                    <div class="col number"><a href="" class="text-black">140</a></div>
+                    <div class="col number"><a href="" class="text-black">141</a></div>
+                    <div class="col number"><a href="" class="text-black">142</a></div>
+                    <div class="col number"><a href="" class="text-black">143</a></div>
+                </div>
+            </div>
+            <div class="col-sm-12 m-auto">
+                <div class="d-flex justify-content-between">
+                    <div class="col number"><a href="" class="text-black">144</a></div>
+                    <div class="col number"><a href="" class="text-black">145</a></div>
+                    <div class="col number"><a href="" class="text-black">146</a></div>
+                    <div class="col number"><a href="" class="text-black">147</a></div>
+                    <div class="col number"><a href="" class="text-black">148</a></div>
+                    <div class="col number"><a href="" class="text-black">149</a></div>
+                    <div class="col number"><a href="" class="text-black">150</a></div>
+                    <div class="col number"><a href="" class="text-black">151</a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                    <div class="col number"><a href="" class="text-black"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--! Gezinti menüsü  -->
+    <section class="harita-gezinti-menüsü my-5">
+        <div class="container">
+            <span><strong><a href="" class="text-black">Site Map</a></strong></span>
+            <span><i class="bi bi-chevron-right small"></i></span>
+            <span><strong><a href="" class="text-black">Destinations</a></strong></span>
+            <span><i class="bi bi-chevron-right small"></i></span>
+            <span>destinations-L1-1</span>
+        </div>
+    </section>
+    <!--! Gezinti menüsü  -->
+
+
+
+    <hr>
+
+
+
+    <!--! Site Haritası Footer  -->
+    <section class="site-haritası-footer">
+        <div class="container d-flex justify-content-between">
+            <div class="footer-link1 d-flex">
+                <span>© 2023 Airbnb,Inc.</span>
+                <span>
+                    <ul class="d-flex">
+                        <li class="mx-3">
+                            <a href="">Gizlilik</a>
+                        </li>
+                        <li class="mx-3">
+                            <a href="">Şartlar</a>
+                        </li>
+                        <li class="mx-3">
+                            <a href="">Site Haritası</a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+            <div class="footer-link2 d-flex">
+                <span>
+                    <ul class="d-flex">
+                        <li class="mx-2">
+                            <i class="bi bi-facebook"></i>
+                        </li>
+                        <li class="mx-2">
+                            <i class="bi bi-twitter"></i>
+                        </li>
+                        <li class="mx-2">
+                            <i class="bi bi-instagram"></i>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </section>
+    <!--! Site Haritası Footer  -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+{% extends "index.html" %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container-fluid odeme-icerik mb-3">
+        {% include "includes/_navbar7.html" %}
+        <hr class="d-none d-md-block">
+        <div class="row">
+
+            <div class="col-12 d-flex align-items-center mb-md-5 my-4  mt-md-5 ">
+                <a class="text-black" href=""><i class="fa-solid fa-chevron-left fs-5 "></i></a>
+                <h1 class="ms-4">Rezervasyon isteği</h1>
+            </div>
+            <!------------------------------------------ Col-6 lık Kısım Start ------------------------------------------------>
+            <div class="row justify-content-between ">
+                <div class="col-12 col-md-6 ms-md-5 mt-5 order-2 order-md-1 m-auto">
+                    <h3>Seyahatiniz</h3>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="my-4">Tarihler</h5>
+                            <h5 class="fw-normal">14-19 Eyl</h5>
+                        </div>
+
+                        <div>
+                            <a class="text-black fs-5 fw-semibold" href="">Düzenle</a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="my-4">Misafir</h5>
+                            <h5 class="fw-normal">1 Misafir</h5>
+                        </div>
+
+                        <div>
+                            <a class="text-black fs-5 fw-semibold" href="">Düzenle</a>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <h3 class="my-4">Nasıl ödeme yapacağınızı seçin</h3>
+
+                    <div class="odeme-secenek">
+
+                        <div class="row justify-content-between align-items-center secenek1 mb-2 border-bottom">
+                            <div class="col-11">
+                                <h5 class="text-black">Tamamını ödeyin</h5>
+                                <p class="fs-5 text-black">Şimdi toplam ücreti (10.618,23 ₺) öderseniz işlem tamamlanmış olacak.
+                                </p>
+                            </div>
+
+                            <div class="col-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between align-items-center secenek2">
+                            <div class="col-11">
+                                <h5 class="text-black">Bir kısmını şimdi, kalan kısmını daha sonra ödeyin</h5>
+                                <p class="fs-5 text-black">Şimdi 6.067,28 ₺ ödeyin. Kalan kısmı (4.550,95 ₺) 30 Ağu 2023 tarihinde
+                                    aynı
+                                    ödeme yönteminden otomatik olarak tahsil edilecektir. Ek ücret alınmayacaktır. <a
+                                        class="text-black fw-semibold" href="">Daha fazla bilgi</a></p>
+                            </div>
+
+                            <div class="col-1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ödeme türü -->
+                    <div class="d-flex justify-content-between my-5">
+                        <h3>Şununla ödeyin:</h3>
+                        <div>
+                            <a href=""><img height="20px" width="40px" src="{% static 'img/amex.png' %}" alt="amex"></a>
+                            <a href=""><img height="20px" width="40px" src="{% static 'img/gpay.jpg' %}" alt="gpay"></a>
+                            <a href=""><img height="20px" width="40px" src="{% static 'img/Mastercard_2019_logo.svg.png' %}"
+                                    alt="master"></a>
+                            <a href=""> <img height="20px" width="40px" src="{% static 'img/visa.png' %}" alt="visa"></a>
+                        </div>
+                    </div>
+                    <!-- Kredi kartı bilgileri -->
+                    <div>
+                        <div class="accordion accordion-flush mb-2" id="accordionFlushExample">
+                            <div class="accordion-item ">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        <i class="fa-solid fa-credit-card"></i> Kredi Kartı veya Banka Kartı
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">G-Pay</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <input type="text" placeholder="Kart numarası" class="form-control">
+                        <div class="d-flex">
+                            <input type="text" placeholder="A/Y" class="form-control w-50 ">
+                            <input type="text" class="form-control w-50" placeholder="CVV">
+                        </div>
+
+                        <input type="text" placeholder="Posta kodu" class="form-control mt-3">
+
+                        <select class="form-control mt-3" name="" id="">
+                            <option value="turkiye">Türkiye</option>
+                            <option value="almanya">Almanya</option>
+                            <option value="ingiltere">İngiltere</option>
+                        </select>
+
+                        <hr>
+                    </div>
+                    <!-- seyehat için gerekenler -->
+                    <div>
+                        <h3 class="my-5">Seyahatiniz için gerekenler</h3>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p class="fw-semibold fs-5 text-black">Ev sahibine mesaj gönderin</p>
+                                <p class="text-black">Seyahat nedeninizi ve ne zaman giriş yapacağınızı ev sahibine bildirin.</p>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-danger px-2 py-1 rounded-2 ">Ekle</button>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <p class="fw-semibold fs-5 text-black">Telefon numarası</p>
+                                <p class="text-black">Seyahat güncellemelerini almak için telefon numaranızı ekleyip onaylayın.</p>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-danger px-2 py-1 rounded-2">Ekle</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="my-5">
+                        <h3 class="mb-3 text-black">İptal politikası</h3>
+                        <p class="fs-5 text-black"> <span class="fs-5 fw-semibold">48 saat içinde ücretsiz iptal.</span> Kısmi para
+                            iadesi için 7 Eyl tarihinden önce iptal edin. <a class="text-black fw-semibold" href="">Daha
+                                fazla bilgi edinin</a></p>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <h3>Temel kurallar</h3>
+
+                        <p class="fs-5 text-black"> Her misafirden, harika bir misafirin nasıl olması gerektiği hakkında birkaç
+                            basit şeyi dikkate almasını isteriz.</p>
+
+                        <ul class="fs-5 text-black">
+                            <li>Ev kurallarına uyun.</li>
+                            <li>Ev sahibinizin evine kendi evinizmiş gibi saygı gösterin</li>
+                        </ul>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <i class="fa-regular fa-folder-open fs-1"></i>
+                            </div>
+                            <div class="col-9">
+                                <p class="fs-5 fw-semibold text-black">Ev sahibi (24 saat içinde) isteğinizi kabul edene kadar
+                                    rezervasyonunuz onaylanmayacaktır.</p>
+                                <p class="fs-5 text-black">O zamana kadar sizden ödeme alınmayacak.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div>
+                        <small class="text-black">Aşağıdaki düğmeye tıklayarak ev sahibinin ev kuralları, Misafirlere yönelik temel
+                            kurallar, Airbnb'nin Yeniden Rezervasyon ve Para İadesi Politikası şartlarını ve hasardan
+                            sorumlu olmam durumunda Airbnb'nin ödeme yöntemimden tahsil edebileceğini kabul ediyorum. Ev
+                            sahibi rezervasyon isteğimi kabul ederse gösterilen toplam tutarı ödeyeceğimi
+                            onaylıyorum.</small>
+                    </div>
+
+                    <div class="my-5">
+                        <form action="{% url 'payment' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" name="pay" value="Ödeme Yapın" class="bg-danger border-0 fs-5 p-3 rounded-3 text-white w-75 m-auto mt-4 text-center tetxt-decoration">
+                        </form>
+                        <!-- <a class="bg-danger border-0 fs-5 p-3 rounded-3 text-white w-75 m-auto mt-4 text-center tetxt-decoration" href="{% url 'payment' %}"> 
+                            Ödeme Yapın
+                        </a> -->
+                    </div>
+                </div>
+
+                <!------------------------------------------ Col-6 lık Kısım End ------------------------------------------------>
+
+                <!----------------------------------------- Col-4 lük Kısım Start  -->
+
+                <div class="col-md-5 col-12 odeme-sticy order-md-2 order-1">
+                    <div class="row justify-content-between">
+
+                        <div class="col-sm-6 mt-2">
+                            <img src="{% static 'img/rezerve.jpeg' %}" class="rounded-2 img-fluid w-100" alt="">
+                        </div>
+
+                        <div class="col-6 mt-4">
+                            <small class="text-black fs-4">Kırsal</small>
+                            <p class="text-black fs-5">Carmela ile konaklayın.</p>
+
+                            <p class="text-black" ><i class="fa-solid fa-star text-black"></i>5,0</p>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <h4 class="text-black fw-semibold">Fiyat ayrıntıları</h4>
+
+                    <div class="d-flex justify-content-between">
+                        <p class="fs-6 text-black fs-5">1500 * 5 gece</p>
+                        <p class="fs-6 text-black"></p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <a href="" class="text-secondary fs-6 text-black">Airbnb hizmet bedeli</a>
+                        <p class="text-black">1.516,28 ₺</p>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-semibold fs-5 text-black">Toplam</p>
+                        <p class="text-black fs-5">2.000 ₺</p>
+                    </div>
+                </div>
+            </div>
+            <!----------------------------------------- Col-4 lük Kısım End  -->
+        </div>
+    </div>
+
+    {% include "includes/_footer2.html" %}
+
+{% endblock content %}

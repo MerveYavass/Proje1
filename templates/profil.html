@@ -1,0 +1,94 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+    <div class="bildirim-container">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-7">
+                <div class="misafir-section">
+                    <!-- İçerik buraya gelecek -->
+                    <img class="profil img rounded-pill" width="100" height="50" src="{{request.user.profil.profilresim.url}}" alt="">
+                    <h1 class="profilname-h1">{{request.user.username}}</h1>
+                    <h6 class="profil-h6">
+                        Misafir
+                    </h6>
+
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+                <div class="onayli-bilgiler">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <h3 class="onayli-bilgiler-h3 mt-4"> {{request.user.username}} ile ilgili onaylı bilgiler</h3>
+                            <div class="onayli-bilgiler-icin-section d-flex text-center">
+                                <img class="onayli-bilgiler-icin-section-img" src="{% static 'img/tik.jpeg' %}" alt="">
+                                <h4 class="onayli-bilgiler-h5 mt-4">E-Posta adresi</h4>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <hr class="onayli-bilgiler-cizgi ">
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row-mt-5">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <h3 class="onayli-bilgiler-h3 mt-4">Kimlik doğrulaması</h3>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row">
+                            <h5 class="onayli-bilgiler-h5 mt-3">Kimlik doğrulama hizmeti sayesinde başkalarına
+                                kimliğinizi kanıtlayın.</h5>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="profil-btn btn btn-outline-danger text-light" style="width: 120px;
+                            height: 50px;  margin: 50px; margin-top: 5px;" >
+                                <p class="onayli-bilgiler-p">Rozeti alın</p>
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row"></div>       
+                <section class="profil-olusturma" >
+                    <hr class="onayli-bilgiler-cizgi">
+                    <h2 class="profil-olusturma-zamani-h2 text-start">Profilini Güncelle</h2>
+                    <div class="row">
+                        <span class="span-profil-olusturma text-start">
+                            Airbnb profiliniz her rezervasyonun önemli bir parçasıdır. Diğer ev sahiplerinin ve
+                            misafirlerin sizi tanımasına yardımcı olmak için kendi profilinizi oluşturun.
+                        </span>
+                        <button type="button" class="btn btn-danger my-custom-class mt-4 text-start" style="width: 130px;
+                        height: 50px; ">
+                            <a href="{% url 'profilGuncelle' %}" class="mt-2 text-decoration-none text-white text-center" style="font-size: 15px; font-weight: bold;">Profil Güncelle</a>
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+{% include "includes/_footer3.html" %}
+{% endblock content %}

@@ -1,0 +1,822 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Airbnb,airbnb,ev,konaklama,tatil,misafirler,tarih,rezervasyon,manzara,deniz,konuk evi, daire kiralama,ev paylaşımı,tatil kiralama,özel konaklama,evinizi kiralamak, gezginler için ev, airbnb arama, yurtdışı konaklama,gezi konaklaması,konaklama rezervasyonu">
+  <title>Airbnb</title>
+  <!----------------------------------------- Css ------------------------------------------>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <!------------------------------------------ GoogleFont ------------------------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,500&family=Goldman&family=Instrument+Serif&family=Montserrat:ital,wght@1,100&family=Noto+Sans+JP:wght@100;200&display=swap"
+    rel="stylesheet">
+  <!------------------------------------------- Bootstrap Link ----------------------------->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+</head>
+
+<body>
+
+   {% if messages %}
+  {% for mesaj in messages %}
+  <div class="alert alert-{{mesaj.tags}} text-center">
+    {{mesaj}}
+  </div>
+  {% endfor %}
+  {% else %}
+  {% endif %}
+
+
+  {% block content %}
+  
+ 
+
+  {% include "includes/_navbar1.html" %}
+
+  
+
+
+  <!--! CARD START -->
+  <div class="container-fluid" style="margin-top: 195px;">
+
+    <!--? PARA -->
+    <div class="m-auto d-flex justify-content-center">
+      <div class="paraHesap">
+        <div class="d-flex justify-content-between align-items-center row">
+          <div class="col-10">
+            <span class="para-span1 fs-5 fw-3">Toplam fiyatı göster |</span>
+            <span class="para-span2">Tüm ücretler dahil, vergiler hariç</span>
+          </div>
+          <div class="col-2">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                style="width: 53px; height: 32px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="para-filter ml-2 mt-3 ms-3">
+        <button type="button" class="btn btn-white btn-flter" data-bs-toggle="modal" data-bs-target="#filter-modal"
+          style="border: 1px solid #dddddd; border-radius: 10px; margin-bottom: 2px;">
+          <img src="{% static 'img/filtre.jpeg' %}" alt="" width="15px" height="15px" />
+          Filtreler
+        </button>
+      </div>
+    </div>
+
+    <!--? PARA END -->
+
+
+    <div class="row  mb-5 mt-2 card-start">
+      {% for card in cards %}
+      <div class="ayri col-12 col-sm-6 col-md-4 col-lg-3 ">
+
+
+        <div class="card border-0">
+          <div class="card-body border-0">
+            
+              <div id="{{ card.id }}" class="carousel slide"  >
+
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1" style="width: 5px;height: 5px;"></button>
+                  <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="1" aria-label="Slide 2" style="width: 5px;height: 5px;"></button>
+                  <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="2" aria-label="Slide 3" style="width: 5px;height: 5px;"></button>
+                  <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="3" aria-label="Slide 4" style="width: 5px;height: 5px;"></button>
+                  <button type="button" data-bs-target="#{{ card.id }}" data-bs-slide-to="4" aria-label="Slide 5" style="width: 5px;height: 5px;"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                  <div class="carousel-item active">
+                    <a href="{% url 'cardDetay' card.id %}"> <img src="{{ card.resim1.url }}" class="d-block w-100" alt=""
+                      style="height: 250px; object-fit: cover;">     </a>
+                  </div>
+
+                  <div class="carousel-item">
+                   <a href="{% url 'cardDetay' card.id %}"> <img src="{{ card.resim2.url }}" class="d-block w-100" alt=""
+                    style="height: 250px; object-fit: cover;"></a>
+                  </div>
+
+                  <div class="carousel-item">
+                   <a href="{% url 'cardDetay' card.id %}"><img src="{{ card.resim3.url }}" class="d-block w-100" alt=""
+                    style="height: 250px; object-fit: cover;"></a> 
+                  </div>
+
+                  <div class="carousel-item">
+                   <a href="{% url 'cardDetay' card.id %}"><img src="{{ card.resim4.url }}" class="d-block w-100" alt=""
+                    style="height: 250px; object-fit: cover;"></a> 
+                  </div>
+
+                  <div class="carousel-item">
+                   <a href="{% url 'cardDetay' card.id %}"> <img src="{{ card.resim5.url }}" class="d-block w-100" alt=""
+                    style="height: 250px; object-fit: cover;"></a>
+                  </div>
+                </div>
+
+                {% if user.is_authenticated %}
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <input type="hidden" name="cardId" value="{{card.id}}">
+                    <button name="begen" type="submit"
+                    {% if request.user in card.like.all  %}
+                    class='likebuttonkirmizi'
+                    {% else %}
+                    class="likebutton" 
+                    {% endif %}   
+                    >
+                    <i class="fa-solid fa-heart fs-3"></i>
+                    </button>
+                </form>
+                {% else %}
+                <a class="likebutton" href="{% url 'register' %}"><i  class="fa-solid fa-heart fs-3"></i></a>
+                {% endif %}
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#{{ card.id }}" data-bs-slide="prev">
+                  <span> <i class="fa-solid fa-circle-chevron-left" style="font-size: x-large;"></i></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#{{ card.id }}" data-bs-slide="next">
+                  <span> <i class="fa-solid fa-circle-chevron-right" style="font-size: x-large;"></i></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+       
+      
+            <div class="container-fluid mt-3">
+              <div class="row">
+                <div class="col-9">
+                  <h3>
+                    <b class="fs-5">
+                      {{ card.adress }}
+                    </b>
+                  </h3>
+                  <h6 class="card-subtitle mb-2 text-body-secondary fs-5">
+                    {{ card.aciklama }}
+                  </h6>
+                  <h6 class="card-subtitle mb-2 text-body-secondary fs-5">
+                    {{ card.girisDate|date:"d F" }} - {{ card.cikisDate|date:"d F" }}
+                  </h6>
+                  <p class="card-text fs-5"> <span class="fw-bold text-black">{{ card.fiyat }} </span>₺ gece</p>
+                </div>
+                <div class="col-3">
+                  <i class="fa-sharp fa-solid fa-star" style="color: #222222; font-size: 14px;"><span>{{card.puan}},0</span></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+
+      {% endfor %}
+      
+      
+    </div>
+  </div>
+
+  <!--! CARD END -->
+
+
+  <div id="map-container"  class="d-none d-md-block">
+    <a href="{% url 'harita' %}">
+      <button id="toggle-map"
+        style=" width: 150px; height: 50px; text-align: center; border: none; background-color: #222222; color: white; align-items: center; column-gap: 10px; padding: 5px 20px; border-radius: 30px; position: fixed; bottom: 10%; right: 45%; font-size: small; font-weight: bold;z-index:5;">
+        Haritayı Göster
+        <i class="fa-regular fa-map ms-1"></i>
+      </button>
+    </a>
+  </div>
+
+
+  <script>
+    $(document).ready(function () {
+      $("#heart-btn").click(function () {
+        $('#heart-icon').css('color', 'red');
+      });
+    });
+
+
+
+  </script>
+
+  {% include "includes/_footer.html" %}
+  {% endblock content %}
+
+  <!-- Modal Start -->
+<div
+class="modal fade"
+id="filter-modal"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Filtreler</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!--------- section1 START---------------->
+        <div class="part part-1">
+          <div class="filter-title d-flex">
+            <h2>Fiyat aralığı</h2>
+            <!-- filtre butonu buraya kondu -->
+            <form class="d-flex small-form" role="search">
+              <input class="form-input form-control me-2" style="width: 250px;" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success small-button" style="background-color: rgb(245, 22, 100); color: white; border: none;" type="submit">Search</button>
+            </form>
+             <!-- filtre butonu buraya kondu -->
+          </div>
+          <div class="filter-subhead">
+            Ücretler veya vergiler hariç ortalama gecelik fiyat: 1.551 ₺.
+          </div>
+
+
+  <div class="search-row">
+  
+    <input type="text" name="min_fiyat" placeholder="Minimum fiyat" value="{{min_fiyat}}">
+    <div class="divider"></div>
+    <input type="text" name="max_fiyat" placeholder="Maksimum fiyat" value="{{max_fiyat}}">
+  </div>
+
+</div>
+
+        <!--------- section1  END---------------->
+        <!--------- section2 START---------------->
+        <div class="part">
+          <div class="filter-title">
+            <h2>Yatak odaları ve banyolar</h2>
+          </div>
+          <div class="subpart">
+            <div class="filter-subhead2">Yatak Odaları</div>
+            <div class="filter-btn2">
+              <input
+                type="hidden"
+                name="yatak_sayisi"
+                id="yatak_sayisi"
+                value="hepsi"
+              />
+              <button
+                type="button"
+                value="hepsi"
+                class="btn btn-light yatak-sayisi button-black"
+              >
+                Tümü
+              </button>
+              <button
+                type="button"
+                value="1"
+                class="btn btn-light yatak-sayisi"
+              >
+                1
+              </button>
+              <button
+                type="button"
+                value="2"
+                class="btn btn-light yatak-sayisi"
+              >
+                2
+              </button>
+              <button
+                type="button"
+                value="3"
+                class="btn btn-light yatak-sayisi"
+              >
+                3
+              </button>
+              <button
+                type="button"
+                value="4"
+                class="btn btn-light yatak-sayisi"
+              >
+                4
+              </button>
+              <button
+                type="button"
+                value="5"
+                class="btn btn-light yatak-sayisi"
+              >
+                5
+              </button>
+              <button
+                type="button"
+                value="6"
+                class="btn btn-light yatak-sayisi"
+              >
+                6
+              </button>
+              <button
+                type="button"
+                value="7"
+                class="btn btn-light yatak-sayisi"
+              >
+                7
+              </button>
+              <button
+                type="button"
+                value="8+"
+                class="btn btn-light yatak-sayisi"
+              >
+                8+
+              </button>
+            </div>
+          </div>
+
+          <div class="subpart">
+            <div class="filter-subhead2">Banyolar</div>
+            <div class="filter-btn2">
+              <input
+                type="hidden"
+                name="banyo_sayisi"
+                id="banyo_sayisi"
+                value="hepsi"
+              />
+              <button
+                type="button"
+                value="hepsi"
+                class="btn btn-light banyo-sayisi button-black"
+              >
+                Tümü
+              </button>
+              <button
+                type="button"
+                value="1"
+                class="btn btn-light banyo-sayisi"
+              >
+                1
+              </button>
+              <button
+                type="button"
+                value="2"
+                class="btn btn-light banyo-sayisi"
+              >
+                2
+              </button>
+              <button
+                type="button"
+                value="3"
+                class="btn btn-light banyo-sayisi"
+              >
+                3
+              </button>
+              <button
+                type="button"
+                value="4"
+                class="btn btn-light banyo-sayisi"
+              >
+                4
+              </button>
+              <button
+                type="button"
+                value="5"
+                class="btn btn-light banyo-sayisi"
+              >
+                5
+              </button>
+              <button
+                type="button"
+                value="6"
+                class="btn btn-light banyo-sayisi"
+              >
+                6
+              </button>
+              <button
+                type="button"
+                value="7"
+                class="btn btn-light banyo-sayisi"
+              >
+                7
+              </button>
+              <button
+                type="button"
+                value="8"
+                class="btn btn-light banyo-sayisi"
+              >
+                8+
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--------- section2  END---------------->
+        <!--------- section3 START---------------->
+        <div class="part part3">
+          <div class="filter-title">
+            <h2>Yer tipi</h2>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-3">
+                <input type="hidden" name="ev" value="">
+                <button type="button" class="btn btn-outline-secondary ev-tipi" data-name="ev" data-ev-tipi="EV">
+                  <span>
+                    <i class="fa-solid fa-house" style="font-size: 23px; color: black;"></i>
+                  </span>
+                  <span class="btn-description">Ev</span>
+                </button>
+              </div>
+              <div class="col-3">
+                <input type="hidden" name="daire" value="">
+                <button type="button" class="btn btn-outline-secondary ev-tipi" data-name="daire" data-ev-tipi="DAIRE">
+                  <span>
+                    <i class="fa-regular fa-building"style="font-size: 23px; color: black;"></i>
+                  </span>
+                  <span class="btn-description">Daire</span>
+                </button>
+              </div>
+              <div class="col-3">
+                <input type="hidden" name="misafir_ev" value="">
+                <button type="button" class="btn btn-outline-secondary ev-tipi" data-ev-tipi="MISAFIR_EVI" data-name="misafir_ev">
+                  <span>
+                   <i class="fa-solid fa-house-chimney-crack"style="font-size: 23px; color: black;"></i>
+                  </span>
+                  <span class="btn-description">Misafir Evi</span>
+                </button>
+              </div>
+              <div class="col-3">
+                <input type="hidden" name="otel" value="">
+                <button type="button" class="btn btn-outline-secondary ev-tipi" data-name="otel" data-ev-tipi="OTEL">
+                  <span>
+                    <i class="fa-solid fa-hotel"style="font-size: 23px; color: black;"></i>
+                  </span>
+                  <span class="btn-description">Otel</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--------- section3  END---------------->
+        <!-- section4 START -->
+        <div class="part part-4">
+          <div class="filter-title">
+            <h2>Olanaklar</h2>
+          </div>
+          <h3>Temel olanaklar</h3>
+
+          <div class="row">
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="1"/>
+                <span class="checkmark"></span>
+                Wifi
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="4"/>
+                <span class="checkmark"></span>
+                Çamaşır makinesi
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="6"/>
+                <span class="checkmark"></span>
+                Klima
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="8"/>
+                <span class="checkmark"></span>
+                Özel çalışma alanı
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="10"/>
+                <span class="checkmark"></span>
+                Saç kurutma makinesi
+              </label>
+            </div>
+
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="2"/>
+                <span class="checkmark"></span>
+                Mutfak
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="5"/>
+                <span class="checkmark"></span>
+                Kurutma makinesi
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="7"/>
+                <span class="checkmark"></span>
+
+                Isıtma
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox"  name="temel_olanaklar[]" value="9"/>
+                <span class="checkmark"></span>
+                TV
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="temel_olanaklar[]" value="11"/>
+                <span class="checkmark"></span>
+                Ütü
+              </label>
+            </div>
+          </div>
+
+          <h3>Özellikler</h3>
+
+          <div class="row">
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="ozellikler[]" value="1"/>
+                <span class="checkmark"></span>
+                Havuz
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="ozellikler[]" value="3" />
+                <span class="checkmark"></span>
+                Binada ücretsiz otopark
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="ozellikler[]" value="5"/>
+                <span class="checkmark"></span>
+                Beşik
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="ozellikler[]" value="7"/>
+                <span class="checkmark"></span>
+                Mangal
+              </label>
+            </div>
+
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="ozellikler[]" value="2"/>
+                <span class="checkmark"></span>
+                Jakuzi
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="ozellikler[]" value="4"/>
+                <span class="checkmark"></span>
+                Elektrikli araç şarjı
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="ozellikler[]" value="6"/>
+                <span class="checkmark"></span>
+                Spor salonu
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="ozellikler[]" value="8"/>
+                <span class="checkmark"></span>                     
+                  Kahvaltı
+              </label>
+              
+            </div>
+          </div>
+
+          <h3>Konum</h3>
+
+          <div class="row">
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="konumlar[]" value="1" />
+                <span class="checkmark"></span>
+                Deniz kenarı
+              </label>
+             
+            </div>
+
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="konumlar[]" value="2"/>
+                <span class="checkmark"></span>
+                Sahil kenarı
+              </label>
+              
+            </div>
+          </div>
+
+          <h3>Emniyet</h3>
+
+          <div class="row">
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="emniyetler[]" value="1"/>
+                <span class="checkmark"></span>
+                Duman dedektörü
+              </label>
+            </div>
+
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="emniyetler[]" value="2"/>
+                <span class="checkmark"></span>
+                Karbonmonoksit alarmı
+              </label>
+            </div>
+          </div>
+        </div>
+        <!--------- section4  END---------------->
+        <!------ section5 START ------->
+        <div class="part part-5">
+          <div class="filter-title">
+            <h2>Rezervasyon seçenekleri</h2>
+          </div>
+<div class="row">
+<div class="col-6">
+
+<div class="filter-subhead5">Anında Rezervasyon</div>
+<div class="filter-description5">
+  Ev sahibinden onay beklemeden rezervasyon yapabileceğiniz
+  kayıtlar
+</div>
+
+<div class="filter-subhead5">Kendi kendine giriş</div>
+<div class="filter-description5">
+Varışta mekâna kolay erişim
+</div>
+
+</div>
+
+</div>
+          
+
+          
+        </div>
+        <!--------- section5  END---------------->
+        <!------ section6 START ------->
+        <div class="part part-6">
+          <div class="filter-title-6">
+            <h2>Erişilebilirlik özellikleri</h2>
+          </div>
+          <div class="filter-subhead-6">Misafir girişi ve park yeri</div>
+          <div class="row">
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="misafir_girisi[]" value="1"/>
+                <span class="checkmark"></span>
+                Basamaksız misafir girişi
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="misafir_girisi[]" value="3"/>
+                <span class="checkmark"></span>
+                Misafir girişine giden basamaksız yol
+              </label>
+            </div>
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="misafir_girisi[]" value="2"/>
+                <span class="checkmark"></span>
+                81 cm'den geniş misafir girişi
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="misafir_girisi[]" value="4"/>
+                <span class="checkmark"></span>
+                Engelli park yeri
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-subhead-6">Yatak odası</div>
+          <div class="row">
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="yatak_odasi[]" value="1" />
+                <span class="checkmark"></span>
+                Basamaksız yatak odası erişimi
+              </label>
+            </div>
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="yatak_odasi[]" value="2"/>
+                <span class="checkmark"></span>
+                81 cm'den geniş yatak odası girişi
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-subhead-6">Banyo</div>
+          <div class="row">
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="banyolar[]" value="1"/>
+                <span class="checkmark"></span>
+
+                Basamaksız banyo erişimi
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="banyolar[]" value="2"/>
+                <span class="checkmark"></span>
+                Duş tutamağı
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="banyolar[]" value="3"/>
+                <span class="checkmark"></span>
+                Düzayak duş
+              </label>
+            </div>
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="banyolar[]" value="4"/>
+                <span class="checkmark"></span>
+                81 cm'den geniş banyo girişi
+              </label>
+
+              <label class="checkbox-label">
+                <input type="checkbox" name="banyolar[]" value="5"/>
+                <span class="checkmark"></span>
+                Tuvalet tutamağı
+              </label>
+
+              <label class="checkbox-label">
+                <input type="checkbox" name="banyolar[]" value="6"/>
+                <span class="checkmark"></span>
+                Duş veya banyo oturağı
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-subhead-6">Uyarlanabilir donanım</div>
+          <div class="row">
+            <div class="col-6">
+              <label class="checkbox-label">
+                <input type="checkbox" name="donanimlar[]" value="1"/>
+                <span class="checkmark"></span>
+
+                Tavan veya taşınabilir kaldıraç
+              </label>
+            </div>
+            </div>
+        </div>
+
+        
+        <!--------- section6  END---------------->
+
+        <!------ section7 START ------->
+        <div class="part part-7">
+          <div class="filter-title-7">
+            <h2>En üst düzey konaklamalar</h2>
+          </div>
+          <div class="row">
+
+          <div class="col-6">
+
+          
+            <div>
+              <div class="filter-subhead-7">Süper Ev Sahibi</div>
+              <div class="filter-description-7">
+                Saygın ev sahipleriyle kalın
+              </div>
+            </div>
+        
+          <div class="filter-subhead-7">Airbnb Plus</div>
+          <div class="filter-description-7">
+            Her Plus evi kalite açısından incelenir
+          </div>
+        
+        </div>
+        </div>
+        </div>
+        
+        
+        <!--------- section7  END---------------->
+        
+      
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Tümünü Temizle
+        </button>
+        <button type="submit" class="btn btn-primary">Ara</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+</div>
+
+<!-- MODAL END -->
+
+
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/0f9c5d1ee2.js" crossorigin="anonymous"></script>
+  <!--------------------------------------------------- Bootstrap Js --------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="{% static 'main.js' %}"></script>
+
+
+</body>
+
+</html>

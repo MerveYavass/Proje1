@@ -1,0 +1,66 @@
+{% load static %}
+    <!-- Card Detay Navbar Start -->
+      <div class="d-none d-md-block">
+        <div class="container-fluid d-flex justify-content-between align-items-center  border-bottom pb-4 mt-4">
+
+          <div class="align-items-center d-flex cardDetay-logo">
+            <a href="{% url 'index' %}"><img src="{% static 'img/logo3.jpg' %}" class="d-block" width="50px" alt=""></a>
+            <span>airbnb</span>
+          </div>
+
+
+          <div class="d-flex align-items-center">
+            <button class="cardDetay-login border-0 bg-white"> <a class="p-3 fw-semibold" href="{% url 'evtasima' %}">Evinizi Airbnb'ye taşıyın</a> </button>
+            <button class="border-0 bg-white"><i class="fa-solid fa-globe p-3"></i></button>
+            <div class="dropdown  bg-white">
+              <button
+                class="btn btn-light bg-white border-1 rounded-end-pill rounded-start-pill align-items-center dropdown-toggle"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-bars fs-5"></i>
+                <i class="fa-solid fa-circle-user  fs-4"></i>
+              </button>
+              <ul class="dropdown-menu  bg-white">
+                {% if user.is_authenticated %}
+                <li><a class="dropdown-item border-0 " href="">2023 Yaz Sürümü</a></li>
+                <hr>
+                <li><a class="dropdown-item  border-0" href="{% url 'mesajlar' %}">Mesajlar</a></li>
+                <li><a class="dropdown-item border-0" href="{% url 'seyahat' %}">Seyahatler</a></li>
+                <li><a class="dropdown-item border-0 " href="{% url 'favori' %}">Favoriler</a></li>
+                <hr>
+                <li><a class="dropdown-item  border-0" href="">Kayıtları yönetin</a></li>
+                <li><a class="dropdown-item  border-0" href="{% url 'hesap' %}">Hesap</a></li>
+                <hr>
+                <li><a class="dropdown-item border-0" href="">Yardım</a></li>
+                <li><a class="dropdown-item border-0" href="{% url 'logout' %}">Oturumu kapatın</a></li>
+                {% else %}
+                <li><a class="dropdown-item border-0 " href="{% url 'register' %}">Kaydolun</a></li>
+                <li><a class="dropdown-item  border-0" href="{% url 'login' %}">Oturum açın</a></li>
+                <hr>
+                <li><a class="dropdown-item  border-0" href="{% url 'ilan1' %}">Evinizi Airbnb'ye taşıyın</a></li>
+                <li><a class="dropdown-item border-0" href="">Yardım</a></li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="d-block d-md-none position-sticky top-0">
+        <div class="container-fluid d-flex justify-content-between">
+          <div>
+            <a href="{% url 'index' %}"><i class="fa-solid fa-chevron-left fs-4 bg-secondary-subtle p-3 rounded-pill text-secondary"></i></a>
+          </div>
+
+          <div class="d-flex">
+            <div class="me-5">
+              <a href=""><i class="fa-solid fa-arrow-up-from-bracket fs-4 bg-secondary-subtle p-3 rounded-pill text-secondary"></i></a>
+            </div>
+
+            <div>
+              <a href=""><i class="fa-regular fa-heart fs-4 bg-secondary-subtle p-3 rounded-pill text-secondary"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card Detay End -->

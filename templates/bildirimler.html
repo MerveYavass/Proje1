@@ -1,0 +1,84 @@
+{% extends "index.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+<div class="container-fluid">
+
+    {% include "includes/_navbar4.html" %}
+
+    <!-- Bildirim Containerı -->
+    <div class="bildirim-container">
+        <div class="row">
+
+            <div class="row mb-5">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="bildirimler-responsive text-center d-flex">
+                        <img src="img/profillogo.jpg" alt="" style="margin-right: 10px;">
+                        <div class="yazilar">
+                            <p>Profilinizi tamamlamak ve siteye daha kolay giriş yapmak için Facebook'a bağlanın.</p>
+                            <p class="tarih">9 Mayıs 2023</p>
+                        </div>
+                        <img src="img/logox.jpg" alt="" style="width: 28px; height: 32px; margin-left: auto;">
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-center"></div>
+            </div>
+
+
+
+            <div class="row mb-5">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="bildirimler-responsive text center d-flex">
+                        <img src="img/profillogo.jpg" alt="" style="margin-right: 10px;">
+                        <div class="yazilar">
+                            <p class="aciklama">Lütfen size e-postayla gönderdiğimiz bağlantıya tıklayarak e-posta
+                                adresinizi onaylayın. E-postayı bulamazsanız yeni bir e-posta onayı isteyebilir veya
+                                eposta adresinizi değiştirebilirsin.</p>
+                            <p class="tarih">9 Mayıs 2023</p>
+                        </div>
+
+                        <img src="./static/img/logox.jpg" alt="" style="width: 32px; height: 32px;">
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-center"></div>
+            </div>
+        </div>
+    </div>
+
+    {% include "includes/_footer2.html" %}
+    
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>

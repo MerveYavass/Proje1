@@ -1,0 +1,120 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+{% include "includes/_navbar6.html" %}
+<div>
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!--? Kategori Kısmı-->
+    <div id="kategorim">
+      <div class="kategori justify-content-center" >
+        <h1 class="text-center">Aşağıdakilerden hangisi yerinizi en iyi tanımlıyor?</h1>
+        <h5 class="text-secondary text-center">Kiralamak istediğiniz yer tipi:</h5>
+        {{form.kategori}}
+      </div>
+    </div>
+    <!--? Kategori Kısmı-->
+
+    <!--? Adres -->
+    <div id="adresim">
+      <div class="adres align-items-center justify-content-center">
+        <h1 class="text-center">Yeriniz nerede bulunuyor?</h1>
+        <h5 class="text-secondary text-center">Adresiniz misafirlerle yalnızca rezervasyon yaptıklarında paylaşılır.
+        </h5>
+        {{form.adress}}
+      </div>
+    </div>
+    <!--? Adres -->
+
+    <!--? Ev Özellikleri -->
+    <div id="evOzelligim">
+      <div class="evOzellik align-items-center justify-content-center">
+        <h1 class="text-center">Misafirlerinize yerinizin neler sunduğunu anlatın</h1>
+        <h5 class="text-secondary my-4 text-center">Kaydınızı yayımladıktan sonra daha fazla olanak ekleyebilirsiniz.
+        </h5>
+        {{form.ev_ozellikleri}}
+      </div>
+    </div>
+    <!--? Ev Özellikleri -->
+    
+    <!--? Açıklama -->
+    <div id="aciklamam">
+      <div class="aciklama align-items-center justify-content-center">
+        <h1 class="text-center">Kaydınızla ilgili bir açıklama giriniz</h1>
+        <h5 class="text-secondary text-center">Kaydınızı yayımladıktan sonra açıklamanızı değiştirebilirsiniz.</h5>
+        {{form.aciklama}}
+      </div>
+    </div>
+    <!--? Açıklama -->
+
+    <!--? Resim -->
+    <div id="resimim">
+      <div class="resim align-items-center justify-content-center">
+        <h2 class="text-center">
+          ev kategorisindeki yerinizin bazı fotoğraflarını ekleyin.
+        </h2>
+        <h5 class="text-center">
+          Başlamak için 5 fotoğraf gerekiyor.Daha sonra başka fotoğraflar ekleyebilir veya bunları değiştirebilirsiniz.
+        </h5>
+        {{form.resim1}}
+        {{form.resim2}}
+        {{form.resim3}}
+        {{form.resim4}}
+        {{form.resim5}}
+      </div>
+    </div>
+    <!--? Resim -->
+
+    <!--? Fiyat -->
+    <div id="fiyatim">
+      <div class="fiyat align-items-center justify-content-center">
+        <h1 class="text-center">Şimdi fiyatınızı belirleyin:</h1>
+        <h5 class="text-center">Bunu dilediğiniz zaman değiştirebilirisniz.</h5>
+        {{form.fiyat}}
+      </div>
+    </div>
+    <!--? Fiyat -->
+
+    <!--? Giriş ve Çıkış -->
+    <div id="girisimCikisim">
+      <div class="girisCikis align-items-center justify-content-center">
+        <h2 class="text-center">Kaydınızın uygunluk durumunu giriniz:</h2>
+        <p class="text-black text-center fs-5">Giriş Tarihi:</p>
+        {{form.girisDate}}
+        <p class="text-black text-center fs-5 mt-2">Çıkış Tarihi:</p>
+        {{form.cikisDate}}
+      </div>
+    </div>
+    <!--? Giriş ve Çıkış -->
+
+    <!--? Kayıt tamamla  -->
+    <div id="kaydim">
+      <div class="left-half">
+
+        <div>
+          <video style="object-fit:cover;" width="100%" src="{% static 'img/ilanVideo.mp4' %}" muted autoplay
+            loop></video>
+        </div>
+
+
+      </div>
+
+      <div class="right-half">
+        <div class=" row w-75">
+          <h1 style="font-size: 50px;">Tebrikler {{request.user.username}} !</h1>
+          <p class="fs-5 mt-4 text-white">Bir ev sahibinden diğerine: Aramıza hoş geldiniz. Evinizi paylaştığınız ve
+            misafirlerimiz için inanılmaz deneyimler yaratmaya yardımcı olduğunuz için teşekkürler.</p>
+          <img src="{% static 'img/ceoİmza.jpg' %}" alt="" class="mt-4"
+            style="width: 70px; height: 50px; color: white;">
+          <p class="fs-5 mt-4">Brian Chesky, CEO</p>
+          <input type="submit" value="Başlayın" class="btn btn-danger w-25">
+        </div>
+      </div>
+    </div>
+    <!--? Kayıt tamamla  -->
+  </form>
+</div>
+{% endblock content %}

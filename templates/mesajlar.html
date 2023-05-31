@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+{% include "includes/_navbar4.html" %}
+<div class="container-mesajlar float-start">
+    <div class="content">
+        <div class="message">
+            <div class="d-flex mt-4">
+                <h3 class="ms-4 me-5"> Mesajlar </h3>
+                <div class="dropdown bg-white ms-5">
+                    <button style="display: flex;" class="btn btn-secondary dropdown-toggle bg-white" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false"><svg viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"
+                            style="display: block; height: 16px; width: 16px; fill: rgb(34, 34, 34);">
+                            <path d="M14 25h4v4h-4zm-4-3h12v-4H10zm-4-7h20v-4H6zM2 4v4h28V4z"></path>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu ms-3">
+                        <li><a class="dropdown-item" href="#">Tüm sohbetler</a></li>
+                        <li><a class="dropdown-item" href="#">Arşivlenmiş sohbetler</a></li>
+                        <li><a class="dropdown-item" href="#">Okunamamış sohbetler</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <hr>
+        <div class="text-center">
+            <h6>Okunmamış mesajınız yok</h6>
+            <p class="text-black">Bir seyahate veya deneyime rezervasyon yaptırdığınızda, ev sahibinizden gelen mesajlar burada gösterilir.
+            </p>
+            <button type="button" class="btn btn-light text-center"
+                style="border-radius: 10px; background-color: white; height: 50px;">Airbnb'yi Keşfedin</button>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="content">
+    </div>
+</div>
+
+{% endblock content %}

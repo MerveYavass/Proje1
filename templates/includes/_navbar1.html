@@ -1,0 +1,451 @@
+{% load static %}
+     <!--! HEADER START -->
+        
+     <header class="fixed-top top-0 header-container m-auto">
+        <!------- Header Start --------->
+        <div class="navbar1  d-none d-md-block">
+    
+          <div class="d-flex justify-content-between align-items-center navbar-header position-relative">
+    
+            <!-- Logo -->
+            <div class="left text-start">
+              <a href="{% url 'index' %}">
+                <img src="{% static 'img/logo0.png' %}" alt="logo">
+                <span class="fs-4 fw-bold">airbnb</span>
+              </a>
+            </div>
+    
+            <!-- Navigation -->
+            <div class="middle">
+              <div class=" m-auto p-2 d-flex">
+    
+                <button id="yer" class="mx-2 yer pe-2 border-end">Herhangi bir yer</button>
+    
+                <button id="hafta" class="mx-2 hafta pe-2 border-end">Herhangi hafta</button>
+    
+                <button id="misafirler" class="d-flex misafirler align-items-center mx-2">
+                  <div class="text-secondary">
+                    Misafir ekle
+                  </div>
+    
+                  <div>
+                    <i class="fa-solid fa-magnifying-glass align-self-center p-2 rounded-pill ms-3"></i>
+                  </div>
+    
+                </button>
+    
+              </div>
+    
+            </div>
+            <!--------------- Middle2 --------------------->
+            <div class="middle2">
+              <div class=" m-auto p-2 d-flex">
+    
+                <button class="mx-2  p-2 border-bottom">Konaklama yeri</button>
+    
+                <button class="mx-2  p-2  border-bottom">Deneyimler</button>
+    
+                <button class="d-flex p-2 border-bottom mx-2">
+                  <div>
+                    Çevrimiçi deneyim
+                  </div>
+    
+    
+    
+                </button>
+    
+              </div>
+    
+            </div>
+    
+            <!-- Login -->
+            <div class="rigth2 ">
+              <div class="rigth  justify-content-end d-flex align-items-center ">
+                <div class="evtasimaa">
+                  <a href="{% url 'evtasima' %}" class="p-3 fw-semibold">Evinizi Airbnb'ye taşıyın</a>
+                  <button type="button" class="btn1 btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fa-solid fa-globe p-3"></i>
+                  </button>
+                </div>
+    
+                <div class="dropdown  bg-white ">
+                  {% if user.is_authenticated %}
+                   <button
+                    class="btn btn-light bg-white border-1 rounded-end-pill d-flex rounded-start-pill align-items-center dropdown-toggle"
+                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars fs-5 d-block "></i>
+                    <img src="{{request.user.profil.profilresim.url}}" class="rounded-5 d-block ms-1"  alt="">
+                  </button>
+                  {% else %}
+                   <button
+                    class="btn btn-light bg-white border-1 rounded-end-pill d-flex rounded-start-pill align-items-center dropdown-toggle"
+                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars fs-5 d-block "></i>
+                    <img src="{% static 'img/avatar.webp' %}" class="rounded-5 d-block ms-1"  alt="">
+                  </button>
+                  {% endif %}
+                 
+                  <ul class="dropdown-menu  bg-white">
+                    {% if user.is_authenticated %}
+                    <li><a class="dropdown-item border-0 " href="">2023 Yaz Sürümü</a></li>
+                    <hr>
+                    <li><a class="dropdown-item  border-0" href="{% url 'mesajlar' %}">Mesajlar</a></li>
+                    <li><a class="dropdown-item border-0" href="{% url 'seyahat' %}">Seyahatler</a></li>
+                    <li><a class="dropdown-item border-0 " href="{% url 'favori' %}">Favoriler</a></li>
+                    <hr>
+                    <li><a class="dropdown-item  border-0" href="">Kayıtları yönetin</a></li>
+                    <li><a class="dropdown-item  border-0" href="{% url 'hesap' %}">Hesap</a></li>
+                    <hr>
+                    <li><a class="dropdown-item border-0" href="">Yardım</a></li>
+                    <li><a class="dropdown-item border-0" href="{% url 'logout' %}">Oturumu kapatın</a></li>
+                    {% else %}
+                    <li><a class="dropdown-item border-0 " href="{% url 'register' %}">Kaydolun</a></li>
+                    <li><a class="dropdown-item  border-0" href="{% url 'login' %}">Oturum açın</a></li>
+                    <hr>
+                    <li><a class="dropdown-item  border-0" href="{% url 'ilan1' %}">Evinizi Airbnb'ye taşıyın</a></li>
+                    <li><a class="dropdown-item border-0" href="">Yardım</a></li>
+                    {% endif %}
+                  </ul>
+                </div>
+    
+              </div>
+            </div>
+    
+    
+          </div>
+  
+    
+        </div>
+        
+    
+        <!------- Header End ------------>
+    
+        <!--------  Header Toggle  ----------->
+    
+    
+        <div class="header-toggle  ">
+    
+          <div class="header-toggle2 m-auto d-flex justify-content-between">
+    
+            <div class="yer-ara" role="button">
+              <div class="mx-2">
+                <label for="">Yer</label> <br>
+                <input type="text" placeholder="Gidilecek yerleri arayın" class="border-0 bg-white">
+              </div>
+            </div>
+    
+            <div class="toggle-div tarih active" role="button">
+              <div class="mx-2">
+                <span class="toggle-span">Giriş</span> <br>
+                <span class="toggle-span2">Tarih ekleyin</span>
+              </div>
+            </div>
+    
+            <div class="toggle-div tarih" role="button">
+              <div class="mx-2">
+                <span class="toggle-span">Çıkış</span> <br>
+                <span class="toggle-span2">Tarih ekleyin</span>
+              </div>
+            </div>
+    
+            <div class="toggle-div kişi-ekle  d-flex position-relative " role="button">
+              <div class="me-2 mx-2">
+                <span class="toggle-span">Kişiler</span> <br>
+                <span class="toggle-span2">Misafir ekleyin</span>
+              </div>
+              <div class="mx-2">
+                <i class="fa-solid fa-magnifying-glass align-self-center rounded-pill  ms-1 p-3"></i>
+              </div>
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <!------------------- Bölgeler ------------------->
+        <div class="bolgeler mt-1 z-3">
+          <div class="row p-2 ">
+            <div class="col-5 bg-white">
+              <div class="row p-3">
+                <p class="mx-2"><b>Bölgeye göre ara</b></p>
+    
+                <div class="col-4 ">
+                <a href="" class="fw-semibold">
+                <img src="{% static 'img/harita1.jpg' %}" class="img-fluid d-block mb-1" alt="">
+                Fransa
+                </a>
+                </div>
+
+                <div class="col-4">
+                <a href="" class="fw-semibold" >
+                <img src="{% static 'img/harita2.jpg' %}" class="img-fluid d-block mb-1" alt="">
+                Güneydoğu
+                    asya
+                </a>
+                </div>
+
+                <div class="col-4">
+                <a href="" class="fw-semibold">
+                <img src="{% static 'img/harita3.jpg' %}" class="img-fluid d-block mb-1" alt="">
+                ABD
+                </a>
+                </div>
+
+                <div class="col-4 mt-2 mb-2">
+                <a href="" class="fw-semibold">
+                <img src="{% static 'img/harita1.jpg' %}" class="img-fluid d-block mb-1" alt="">
+                İtalya
+                </a>
+                </div>
+
+                <div class="col-4 mt-2 mb-2">
+                <a href="" class="fw-semibold">
+                <img src="{% static 'img/harita2.jpg' %}" class="img-fluid d-block mb-1" alt="">
+                Avrupa
+                </a>
+                </div>
+
+                <div class="col-4 mt-2 mb-2">
+                <a href="" class="fw-semibold">
+                <img src="{% static 'img/harita3.jpg' %}" class="img-fluid d-block mb-1" alt="">
+                Esnek arama
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!----------------- Takvim ------------------------------>
+    
+        <div class="takvim z-3">
+          <img class="d-block m-auto img-fluid rounded-4" src="{% static 'img/takvim.png' %}" alt="">
+        </div>
+    
+        <!------------------- Misafir -------------------->
+        <div class="misafir bg-white">
+          <div class="d-flex align-items-center justify-content-between p-2 ">
+            <div class="misafir-div me-5 align-items-center">
+              <span class="misafir-span">Yetişkinler</span>
+              <span class="d-block">13 yaş üzeri ekle</span>
+            </div>
+            <div class="align-items-center misafir-div ms-5">
+              <button class=" rounded-circle border-0 bg-white" id="sub">-</button>
+              <input type="text" id="qtyBox" class="text-center mx-3 border-0 bg-white" style="width: 20px;" readonly=""
+                value="0">
+              <button class=" border-0 bg-white" id="add">+</button>
+            </div>
+          </div>
+          <hr>
+    
+          <div class="d-flex align-items-center justify-content-between p-2">
+            <div class="misafir-div me-5">
+              <span class="misafir-span">Çocuklar</span>
+              <span class="d-block">0-12 yaş</span>
+            </div>
+            <div class="align-items-center misafir-div ms-5">
+              <button class=" border-0 bg-white" id="sub2">-</button>
+              <input type="text" id="qtyBox2" class="text-center border-0 mx-3 bg-white" style="width: 20px;" readonly=""
+                value="0">
+              <button class=" border-0 bg-white" id="add2">+</button>
+            </div>
+          </div>
+          <hr>
+    
+          <div class="d-flex align-items-center justify-content-between p-2">
+            <div class="misafir-div me-5">
+              <span class="misafir-span">Bebekler</span>
+              <span class="d-block">2 yaş ve altı</span>
+            </div>
+            <div class="align-items-center misafir-div ms-5">
+              <button class=" border-0 bg-white" id="sub3">-</button>
+              <input type="text" id="qtyBox3" class="text-center border-0 mx-3 bg-white" style="width: 20px;" readonly=""
+                value="0">
+              <button class=" border-0 bg-white" id="add3">+</button>
+            </div>
+          </div>
+          <hr>
+    
+          <div class="d-flex align-items-center justify-content-between p-2">
+            <div class="misafir-div me-5">
+              <span class="misafir-span">Evcil hayvanlar</span>
+              <span class="d-block"><a class="text-secondary" href="">Tür</a></span>
+            </div>
+            <div class="align-items-center misafir-div ms-5">
+              <button class=" border-0 bg-white" id="sub4">-</button>
+              <input type="text" id="qtyBox4" class="text-center border-0 mx-3 bg-white" style="width: 20px;" readonly=""
+                value="0">
+              <button class=" border-0 bg-white" id="add4">+</button>
+            </div>
+          </div>
+    
+        </div>
+    
+    
+        <!-- ----------- responsive navbar -------------->
+        <div class="responsive-navbar bg-white d-block d-md-none "  role="button">
+          <div class="">
+            <div class="row align-items-center m-auto p-1">
+              <div class="col-2">
+                <i class="fa-solid fa-magnifying-glass mb-2 fs-5"></i>
+              </div>
+    
+              <div class="col-10">
+                <span>Herhangi bir yer</span>
+                <span class="d-block">Herhangi bir hafta * Misafir ekleyin</span>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+    
+  
+        <!-- Responsive Bolge -->
+        <div class="responsive-bolge2 bg-white mt-2">
+          <div class="mt-2 d-flex  justify-content-between  " role="button">
+            <span class="d-block">Tarih</span>
+            <span class="d-block">Tarih ekleyin</span>
+          </div>
+        </div>
+    
+    
+    
+        <div class="responsive-bolge mx-2 p-3 bg-white ">
+          <h5 class="mb-3">Nereye</h5>
+          <div class="row text-center">
+            <div class="col-3"><a href="">
+                <img src="{% static 'img/harita1.jpg' %}" class="img-fluid" alt="">
+                <p>Esnek arama</p>
+              </a></div>
+    
+            <div class="col-3"><a href="">
+                <img src="{% static 'img/harita2.jpg' %}" class="img-fluid" alt="">
+                <p>Fransa</p>
+              </a></div>
+    
+            <div class="col-3"><a href="">
+                <img src="{% static 'img/harita3.jpg' %}" class="img-fluid" alt="">
+                <p>Avrupa</p>
+              </a></div>
+            <div class="col-3"><a href="">
+                <img src="{% static 'img/harita4.jpg' %}" class="img-fluid" alt="">
+                <p>ABD</p>
+              </a></div>
+          </div>
+        </div>
+    
+    
+        <!-- Responsive Takvim -->
+        <div class=" responsive-takvim2 bg-white mt-1">
+          <div class="mt-2 d-flex mx-2 justify-content-between" role="button">
+            <span class="d-block">Tarih</span>
+            <span class="d-block">Tarih ekleyin</span>
+          </div>
+        </div>
+    
+    
+    
+        <div class="responsive-takvim mx-2 p-3 bg-white ">
+          <h6>Seyahatiniz ne zaman</h6>
+          <img src="{% static 'img/takvim.png' %}" class="img-fluid" alt="">
+        </div>
+    
+    
+        <!-- Respnsive Misafir -->
+        <div class=" responsive-misafir2 mt-1 bg-white">
+          <div class="mt-2 d-flex mx-2 justify-content-between " role="button">
+            <span class="d-block">Tarih</span>
+            <span class="d-block">Tarih ekleyin</span>
+          </div>
+        </div>
+    
+    
+    
+        <div class="responsive-misafir   mx-2 p-3  bg-white">
+          <div class="d-flex align-items-center justify-content-between p-2 ">
+            <div class="misafir-div me-5 align-items-center">
+              <span class="misafir-span">Yetişkinler</span>
+              <span class="d-block">13 yaş üzeri ekle</span>
+            </div>
+            <div class="align-items-center misafir-div ms-5">
+              <button class=" rounded-circle border-0 bg-white" id="sub">-</button>
+              <input type="text" id="qtyBox" class="text-center mx-3 border-0 bg-white" style="width: 20px;" readonly=""
+                value="0">
+              <button class=" border-0 bg-white" id="add">+</button>
+            </div>
+          </div>
+          <hr>
+    
+          <div class="d-flex align-items-center justify-content-between p-2">
+            <div class="misafir-div me-5">
+              <span class="misafir-span">Çocuklar</span>
+              <span class="d-block">0-12 yaş</span>
+            </div>
+            <div class="align-items-center misafir-div ms-5">
+              <button class=" border-0 bg-white" id="sub2">-</button>
+              <input type="text" id="qtyBox2" class="text-center border-0 mx-3 bg-white" style="width: 20px;" readonly=""
+                value="0">
+              <button class=" border-0 bg-white" id="add2">+</button>
+            </div>
+          </div>
+          <hr>
+    
+          <div class="d-flex align-items-center justify-content-between p-2">
+            <div class="misafir-div me-5">
+              <span class="misafir-span">Bebekler</span>
+              <span class="d-block">2 yaş ve altı</span>
+            </div>
+            <div class="align-items-center misafir-div ms-5">
+              <button class=" border-0 bg-white" id="sub3">-</button>
+              <input type="text" id="qtyBox3" class="text-center border-0 mx-3 bg-white" style="width: 20px;" readonly=""
+                value="0">
+              <button class=" border-0 bg-white" id="add3">+</button>
+            </div>
+          </div>
+          <hr>
+          <div class="d-flex align-items-center justify-content-between p-2">
+            <div class="misafir-div me-5">
+              <span class="misafir-span">Evcil hayvanlar</span>
+              <span class="d-block"><a class="text-secondary" href="">Tür</a></span>
+            </div>
+            <div class="align-items-center misafir-div ms-5">
+              <button class=" border-0 bg-white" id="sub4">-</button>
+              <input type="text" id="qtyBox4" class="text-center border-0 mx-3 bg-white" style="width: 20px;" readonly=""
+                value="0">
+              <button class=" border-0 bg-white" id="add4">+</button>
+            </div>
+          </div>
+    
+        </div>
+        
+        <!--! Navbar Carousel START-->
+    
+        <div class="navbar-carousels container-fluid bg-white">
+          <div class="category-scroller-container pt-4">
+              <button id="prevBtn">&lt;</button>
+              <div id="categoryScroller">
+  
+                {% for kategori in kategoriler %}
+                <div class="category-item">
+                  <form action="" method="GET" name="kategoris">
+                  <a href="/?kategoris={{kategori.isim}}">
+                    <img src="{{kategori.icon}}" alt="Category 1">
+                    <p class="text-black mt-2" >{{kategori.isim}}</p>
+                  </a>
+                </form>
+                </div>
+                {% endfor %}
+  
+              </div>
+              <button id="nextBtn" class="z-1">&gt;</button>
+            </div>
+        </div>
+      
+        <!--! Navbar Carousel END-->
+   
+      </header>
+    
+    
+    <!--! HEADER END -->
+
+
