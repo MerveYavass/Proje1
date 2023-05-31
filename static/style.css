@@ -1,0 +1,3057 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,500&family=Goldman&family=Instrument+Serif&family=Montserrat:ital,wght@1,100&family=Noto+Sans+JP:wght@100;200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; 
+    
+}
+/* ! yıldıza font size verildi.Footer ve header yazılarını küçülttük. Sonrasında düzeltilecek. */
+
+
+
+/* --------------------------------------------------------- Header ----------------------------- */
+.navbar1{
+    padding: 10px 40px !important;
+    background-color: #fff;
+}
+/* ----- Logo ------- */
+.left img{
+    height: 30px;
+    background-color: white;
+}
+.left a{
+text-decoration: none;
+color: #FF385C;
+font-size: 20px;
+font-weight: 700;
+}
+/* --- Navigation ---- */
+.middle{
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 30px;
+    font-size: 14px;
+    position: relative;
+    top: 0;
+    right: -125px;
+    transition: .4s;
+    box-shadow:1px 2px 4px rgb(207, 206, 206) ;
+}
+.middle:hover{
+    box-shadow: 2px 5px 3px rgb(207, 206, 206);
+}
+.middle button{
+    border: none;
+    background-color: #fff;
+}
+.middle i{
+    background-color: #FF385C;
+    color: white;
+}
+
+/* ------------ Middle2 ------------- */
+.middle2{
+    font-size: 14px;
+    position: relative;
+    top: 0;
+    right: -125px;
+}
+
+.middle2 button{
+    border: none;
+    background-color: #fff;
+    border-bottom: #030303;
+}
+
+.middle2 button:hover{
+    opacity: .7;
+ }
+ .middle2 button:focus{
+     border-bottom: 2px solid rgb(5, 5, 5);
+ }
+/*------------------ Login -------------------*/
+
+.rigth a,.rigth button,.rigth i{
+    color: #393535;
+}
+.rigth a{
+    text-decoration: none;
+    font-weight: 400;
+    transition: .5s;
+}
+.rigth a:hover{
+    background-color: rgb(238, 237, 237);
+    border-radius: 25px;
+
+}
+.rigth .globe i{
+    transition: .5s;
+   
+}
+.rigth .globe i:hover{
+    background-color: rgb(238, 237, 237);
+    border-radius: 25px;
+}
+.dropdown .dropdown-toggle::after{
+    display: none !important;
+}
+.rigth .dropdown i{
+    color: gray;
+   
+}
+.rigth .dropdown{
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 30px;
+    box-shadow: 2px 3px 3px rgb(207, 206, 206) !important;
+    transition: .4s;
+   
+}
+.right .dropdown ul{
+    z-index: 10000;
+}
+.dropdown-menu a{
+    margin-top: 5px;
+    border-radius: 0 !important;
+    font-size: 15px;
+}
+/* .dropdown-toggle-ev::after{
+    
+} */
+
+/* ---- Header Toggle ---------*/
+.header-toggle2{
+    width: 65% !important;
+    border: 1px solid rgb(207, 206, 206);
+    padding: 0 20px;
+    border-radius: 40px;
+    align-items: center;
+    background-color: #fff;
+}
+.toggle-div{
+    padding: 14px 24px;
+    transition: .4s;
+}
+.toggle-div:hover{
+    background-color: rgb(207, 206, 206);
+    border-radius: 30px;
+}
+.header-toggle2 i{
+    position: relative;
+    top: 0% ;
+    right: -30px;
+    background-color: #FF385C;
+    color: white;
+    font-size: 16px;
+
+}
+.toggle-span,.header-toggle2 label{
+    color: #222222;
+    font-size: 13px;
+    font-weight: 600;
+}
+.header-toggle2 .toggle-span2,.header-toggle2 input{
+    font-size: 15px;
+    color: #717171;
+    font-weight: 300;     
+}
+
+.header-toggle2 input{
+    border: none;
+    outline: none;
+    background-color: #E7E7E7;
+}
+.header-toggle2 {
+    position: relative;
+    animation: animatebottom 0.6s;
+  }
+  
+  @keyframes animatebottom {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+  
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+
+/* --------------- Bölgeler ------------- */
+
+.bolgeler .col-5{
+    margin-left: 250px;
+    border: 1px solid #E7E7E7;
+    border-radius: 20px;
+}
+
+.bolgeler img{
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+    transition: .4s;
+    max-height: 120px;
+}
+.bolgeler img:hover{
+    transform: scale(1.01);
+}
+.bolgeler a{
+    text-decoration: none;
+    font-size: 14px;
+    text-align: start;
+    color: #717171;
+}
+
+/* ----Misafir ekle ----- */
+.misafir{
+    width: 40%;
+    margin-top: 20px;
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 30px;
+    width: 30%;
+    position: relative;
+    left: 1000px;
+}
+
+.misafir .misafir-div{
+    padding: 10px;
+}
+.misafir-div .d-block{
+    font-size: 14px;
+    color: #717171;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.misafir-div button{
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    border: 1px solid #b7b5b5 !important;
+    border-radius:50%;
+}
+.misafir-div button:hover{
+    border: 1px solid #717171 !important;
+    
+}
+.misafir-div input{
+    color: #717171;
+}
+.misafir hr{
+    width: 95%;
+    margin: auto;
+}
+
+/* --------- alt login -----*/
+
+.alt-navbar{
+    position:absolute;
+    bottom:0;
+    z-index: 1000;
+    background-color: #fff;
+}
+.alt-navbar i{
+    color: #FF385C;
+}
+.alt-navbar span{
+    font-size: 11px;
+}
+
+/*---- Responsive navbar ----*/
+
+.responsive-navbar{
+    border: 1px solid #c9c9c9;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    color:#717171;
+    align-items: center;
+    font-size: 15px;
+}
+.responsive-navbar .d-block{
+    font-size: 13px;
+    color: #b7b5b5;
+    font-weight: 300;
+}
+
+/* ----Responsive-Bolge -----*/
+.responsive-bolge{
+    border: 1px solid rgb(207, 206, 206);
+    margin-top: 10px;
+    border-radius: 30px;
+    box-shadow:1px 2px 4px rgb(207, 206, 206) ;
+
+}
+.responsive-bolge a{
+    text-decoration: none;
+    color: #717171;
+    font-size: 14px;
+}
+
+.responsive-bolge2{
+    border: 1px solid rgb(207, 206, 206);
+    padding: 10px;
+    border-radius: 10px;
+    color: #717171;
+}
+/* Responsive Takvim */
+.responsive-takvim2{
+    border: 1px solid rgb(207, 206, 206);
+    padding: 10px;
+    border-radius: 10px;
+    color: #717171;
+}
+.responsive-takvim{
+    border: 1px solid rgb(207, 206, 206);
+    margin-top: 10px;
+    border-radius: 30px;
+    box-shadow:1px 2px 4px rgb(207, 206, 206) ;
+
+}
+/*--- Responsive Misafir ----*/
+.responsive-misafir2{
+    border: 1px solid rgb(207, 206, 206);
+    padding: 10px;
+    border-radius: 10px;
+    color: #717171;
+}
+/* ------------ Responsive ------------*/
+@media screen and (max-width:1700px) {
+    .misafir{
+        width: 35%;
+        left: 800px;
+    }
+}
+@media screen and (max-width:1450px) {
+    .misafir{
+        width: 35%;
+        left: 700px;
+    }
+}
+@media screen and (max-width:1355px) {
+    .misafir{
+        width: 35%;
+        left: 600px;
+    }
+}
+
+@media screen and (max-width:1203px) {
+    .misafir{
+        width: 40%;
+        left: 600px;
+        transition: .4s;
+    }
+    .header-toggle2{
+        width: 80% !important;
+        transition: .4s;
+    }
+    .middle2{
+        transition: .4s;
+        font-size: 14px;
+        position: relative;
+        top: 0;
+        right: -50px;
+    }
+    .middle{
+        border: 1px solid rgb(207, 206, 206);
+        border-radius: 30px;
+        font-size: 14px;
+        position: relative;
+        top: 0;
+        right: -50px;
+        transition: .4s;
+        box-shadow:1px 2px 4px rgb(207, 206, 206) ;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .misafir{
+        width: 45%;
+        left: 450px;
+        transition: .4s;
+    }
+    .header-toggle2{
+        width: 80% !important;
+        transition: .4s;
+    }
+    .middle2{
+        transition: .4s;
+        font-size: 14px;
+        position: relative;
+        top: 0;
+        right: -50px;
+    }
+    .middle{
+        border: 1px solid rgb(207, 206, 206);
+        border-radius: 30px;
+        font-size: 14px;
+        position: relative;
+        top: 0;
+        right: -50px;
+        transition: .4s;
+        box-shadow:1px 2px 4px rgb(207, 206, 206) ;
+    }
+    .header .left span{
+        display: none;
+        transition: .4s
+    }
+    .bolgeler .col-5{
+        margin-left: 100px;
+        border: 1px solid #E7E7E7;
+        border-radius: 20px;
+        transition: .4s;
+    }
+}
+
+@media screen and (max-width:978px) {
+    .header-toggle2{
+        width:97% !important;
+    }
+    .middle2{
+        transition: .4s;
+        font-size: 14px;
+        position: relative;
+        top: 0;
+        left: -5px;
+        
+    }
+    .middle{
+        border: 1px solid rgb(207, 206, 206);
+        border-radius: 30px;
+        font-size: 14px;
+        position: relative;
+        top: 0;
+        left: -5px;
+        transition: .4s;
+        box-shadow:1px 2px 4px rgb(207, 206, 206) ;
+    }
+    .header{
+        padding: 20px 0px !important;
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+
+    .misafir{
+        width: 50%;
+        left: 400px;
+        transition: .4s;
+    }
+    .left img{
+        display: none;
+    }
+
+    .header .right .mx-1 a{
+        font-size: 13px;
+    }}
+
+
+/* ------------------------------------------------------------Navbar-Carousel Start ---------------------------------------------*/
+
+.category-scroller-container {
+  position: relative;
+  overflow: hidden;
+  width: 97%; /* Küçük boyutu */
+  margin: 0 auto;
+  background-color: white;
+}
+
+#categoryScroller {
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  overflow: hidden; /* Scroll çubuğunu gizle */
+}
+
+.category-item {
+  flex: 0 0 auto;
+  width: 100px; /* Küçük boyutu */
+  margin-right: 5px; /* Küçük boyutu */
+  text-align: center;
+  position: relative;
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+  max-width: 30px; /* Küçültülen boyutu */
+  max-height: 30px; /* Küçültülen boyutu */
+  opacity: 0.7; /* Resimlerin saydamlık değeri */
+  
+}
+
+
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 10px; /* Küçük boyutu */
+  background-color: whitesmoke;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px; /* Küçük boyutu */
+  transition: background-color 0.3s, color 0.3s; /* Geçiş süresi */
+}
+#prevBtn:hover,
+#nextBtn:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+}
+
+#prevBtn {
+  left: 5px;
+  border: 1px solid gray;
+  width: 35px;
+  z-index: 999;
+  border-radius: 30px; /* Küçük boyutu */
+}
+
+#nextBtn {
+  right: 5px;
+  border: 1px solid gray;
+  width: 35px;
+  z-index: 999;
+  border-radius: 30px; /* Küçük boyutu */
+}
+
+p{
+  color: black;
+  font-size: 12px;
+}
+.category-item a {
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------Navbar-Carousel End ------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------ Card Start -------------------------------------------------*/
+.card{
+    border: none;
+}
+.carousel-inner{
+    border-radius: 15px;
+}
+
+.likebutton{
+  font-size: 1.7rem;
+  position: absolute;
+  border: none;
+  right: 4%;
+  color: rgb(190, 188, 188);
+  top: 4%;
+  background-color:rgba(251, 249, 249, 0);
+  z-index: 2;
+}
+
+.likebuttonkirmizi {
+  font-size: 1.7rem;
+  position: absolute;
+  border: none;
+  right: 4%;
+  top: 4%;
+  background-color:rgba(0, 0, 0, 0);
+  z-index: 2;
+  color: red;
+}
+
+.card-title{
+   font-weight: 600;
+   color: #222222;
+   font-size: 15px;
+   line-height: 19px;
+}
+.card-subtitle{
+    color: #717171;
+    font-size: 15px;
+}
+
+#currency{
+    background-color: white;
+}
+
+.heart-btn {
+    z-index: 3;
+    transform: translateX(-50%);
+    display: flex;
+    position: absolute;
+    color: #ccc;
+    font-size: 20px;
+    top: 2%;
+    right: 0;
+    border: none;
+    cursor: pointer;
+  }
+
+
+
+  .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff; /* isteğe bağlı, butonların arkaplan rengini belirleyebilirsiniz */
+    border: none; /* buton kenarlığını kaldırır */
+    margin: 0 5px; /* butonlar arasındaki boşlukları ayarlar */
+  }
+  .carousel-indicators button:focus {
+    outline: none; /* butona tıklanınca oluşan çerçeve kaldırılır */
+  }
+  .carousel-indicators .active {
+    background-color: #000; /* aktif butonun arkaplan rengini belirleyebilirsiniz */
+  }
+.carousel-control-prev{
+    background-color: #ccc;
+    color: #fff;
+}
+
+/* Para Start */
+
+.paraHesap{
+    border: 1px solid rgb(216, 215, 215);
+    padding: 16px;
+    border-radius: 20px;
+    width: 565px;
+    height: 66px;
+}
+
+.para-span2{
+    color: rgb(117, 117, 116) !important;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width:1110px) {
+    .paraHesap{
+        width: 95% !important;
+    }
+}
+                                /* Para End */
+
+/* ------------------------------------------------------------ Card End ---------------------------------------------------*/
+
+
+
+/*! FOOTER START */
+
+/*? Ana Footer kısmı için */
+footer{
+    background-color: red;
+    height: 55px;
+    border: 0.5px solid rgb(230, 230, 230);
+  }
+  ul li {
+      list-style: none;
+  }
+  ul li a{
+      color: black;
+      text-decoration: none;
+  }
+  ul li a:hover{
+      color: inherit;
+      border-bottom: 1px solid black;
+  }
+  /*? Ana Footer kısmı için */
+  
+
+
+  /*? Diller Bölümü  */
+
+  /*? Diller Bölümünün Butonu */
+  .btn1{
+    color: black;
+    background-color: white;
+    border: none;
+  }
+  .btn1:hover{
+    border-bottom: 1px solid black;
+  }
+  /*? Diller Bölümünün Butonu */
+  
+  /*? Diller Bölümünün açılan Penceresi İçin */
+  .form-switch .form-check-input{
+    width: 3.5rem;
+    height: 2.5rem;
+    margin-left: 409px;
+  }
+  /*? scroll için */
+  #languages{
+    overflow: auto;
+    height: 400px;
+  }
+  #resources .container-fluid{
+    background-color: white;
+    border-radius: 20px;
+  }
+  /*? scroll için */
+  .language-item{
+    margin-right: 5rem;
+  }
+  .language-list-region button{
+    width: 200px;
+  }
+  
+  .dil{
+    height: 55px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+  }
+  .dil:hover{
+    background-color: #f7f7f7;
+  }
+
+  /*? checkbox */
+  .form-check-input:focus{
+    border: black;
+    box-shadow: none !important;
+    outline: 1px solid white !important;
+    border: none !important;
+  }
+  .form-switch .form-check-input:checked ~ .form-check-label::before {
+    background-color: gray;
+  }
+  
+  .form-switch .form-check-input:checked {
+    background-color: black;
+  }
+  /*? checkbox */
+
+  /*? Diller Bölümünün açılan Penceresi İçin */
+
+  /*? Diller Bölümü  */
+  
+
+
+
+
+
+  /*? Para Biriminin Butonu */
+  .btn2{
+    color: black;
+    background-color: white;
+    border: none;
+  }
+  .btn2:hover{
+    border-bottom: 1px solid black;
+  }
+  .money{
+    height: 55px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+  }
+  .money:hover{
+    background-color: #f7f7f7;
+  }
+  /*? Para Biriminin Butonu */
+  
+
+
+
+  /*? Destek ve Kaynaklar bölümü Footerın Alttan Çıkması İçin */
+  .animate-bottom {
+      position: relative;
+      animation: animatebottom 0.4s;
+    }
+    
+    @keyframes animatebottom {
+      from {
+        bottom: -300px;
+        opacity: 0;
+      }
+    
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+  /*? Destek ve Kaynaklar bölümü Footerın Alttan Çıkması İçin */
+  
+
+
+  /*? GİZLİLİK SAYFASI*/
+
+  /*? Gizlilik Navbar */
+  .form-control:focus{
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .form-control-btn{
+    background-color: #E00B41;
+    border-radius: 100%;
+    border:none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  header .rigth{
+    justify-content: end;
+  }
+  
+  header .rigth .btn1{
+    border: none;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  header .rigth .btn1:hover{
+   background-color: rgba(231, 231, 231, 0.368);
+   border-radius: 25px;
+  }
+  header .rigth .login{
+    background-color: white;
+    border: 1px solid rgb(231, 231, 231);
+    padding: 10px;
+    color: rgb(108, 107, 107);
+    transition: .4s;
+  }
+  .gezinti-menüsü a{
+    text-decoration: none;
+    color: black;
+  }
+  .gezinti-menüsü a:hover{
+    border-bottom: 1px solid black;
+  }
+  .btn-kaydol{
+    background-color: #E00B41;
+    width: 100%;
+  }
+  .kaydol{
+    border: 1px solid rgb(160, 160, 160);
+    padding: 9px;
+    height: 120px !important;
+  }
+  .kaydol-1{
+    border: 1px solid rgb(160, 160, 160);
+    padding: 9px;
+    height: 145px !important;
+  }
+
+  .btn-yardım{
+    background-color: #E00B41;
+    border: none;
+    border-radius: 100%;
+    color: white;
+    padding: 4px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  .yardım-input:focus{
+    box-shadow: none !important;
+    outline: 1px solid white !important;
+    border-color: white;
+    border: none !important; 
+  } 
+  .yardım-form{
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 30px;
+    padding: 4px;
+    padding-left: 10px;
+  }
+  /*? Gizlilik Navbar */
+
+  /*? GİZLİLİK SAYFASI*/
+  
+
+
+
+  /*? Şartlar Sayfası */
+  .yasal-sartlar-bilgilendirme {
+    border: 0.5px solid rgb(167, 167, 167);
+    border-radius: 8px;
+    padding: 10px;
+    width: 636px;
+    transition: transform 0.3s ease; /* Animasyonlu geçiş */
+  }
+
+/*? Responsive olsun diye verdiğim kodlar */
+.yardım-form {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.yardım-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  max-width: calc(100% - 48px);
+}
+.btn-yardım {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+/*? Şartlar içindeki kaydol butonu için responsive */
+@media (max-width: 1115px) {
+  .kaydol {
+    display: none;
+  }
+}
+@media (max-width: 1777px) {
+  .responsive-btn a {
+    display: none;
+  }
+}
+@media (max-width: 1116px) {
+  .responsive-btn a {
+    display: block;
+  }
+}
+.metin{
+  margin-left: 60px;
+}
+/*? Gizlilik içindeki kaydol butonu için responsive */
+
+/*? Responsive olsun diye verdiğim kodlar */
+
+/*? Şartlar Sayfası */
+
+  
+
+
+
+  /*? SİTE HARİTASI */
+
+
+  /*? header logo */
+  header .left b{
+    color: #FF385C;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /*? header logo */
+
+  /*? Top Destination */
+  .header-bottom a{
+    color: #484848;
+    font-weight: 500;
+  }
+  .top-destinations a{
+    white-space: nowrap;
+    font-size: small;
+    font-weight: 500;
+  }
+  .number{
+    font-size: medium;
+    width: 53px;
+    height: 55px;
+  }
+  /*? responsive site için haritası */
+  @media (max-width: 900px) {
+    .destination-link a {
+      white-space: normal;
+      padding: 0 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    
+  }
+  /*? Top Destination */
+
+  /*? Site Haritası Responsive */
+@media screen and (max-width: 800px) {
+  .more-destinations .col {
+    flex-wrap: wrap;
+  }
+  .more-destinations .number:nth-child(10n+1) {
+    margin-top: 2px;
+  }
+}
+/*? Site Haritası Responsive */
+
+  /*? SİTE HARİTASI */
+  
+  
+/*! ------------------------------------------------------------- Footer End ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! --------------------------------------------------------------Form Start----------------------------------------------- */
+
+
+.veya{
+    margin: 5px;
+}
+
+.hr1,
+.hr2{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(221, 221, 221);
+}
+
+/* Footer */
+ul li {
+    list-style: none;
+}
+ul li a{
+    color: black;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: inherit;
+    border-bottom: 1px solid black;
+}
+
+/* --------------------------------------------------------------Form Start----------------------------------------------- */
+.devamet{
+    background-color: #e31c5f;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+}
+.span1{
+    color: white;
+    font-size: 20px;
+}
+
+.hr1,
+.hr2{ 
+    width: 100%;
+    height: 1px;
+   background-color: rgb(221, 221, 221);
+}
+.form-login{
+  margin-top: 50px;
+  
+}
+.form-login .container{
+  width:50% !important;
+}
+@media screen and (max-width:992px) {
+
+  .form-login .container{
+    width: 80% !important;
+  }
+}
+
+
+
+
+/* ----------------------------- Header Start ---------------------------------- */
+.header-form{
+    padding: 15px 40px;
+}
+
+/*--------------------------------- Logo ------------------------------------------*/
+.header-form .left img{
+    height: 35px;
+}
+.header-form .left a{
+    text-decoration: none;
+} 
+.header-form .left b{
+    color: rgba(249, 50, 50, 0.794);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*------------------------------- Navigation -----------------------------------*/
+.header-form .middle{
+    border: 1px solid rgb(190, 188, 188);
+    border-radius: 20px;
+    padding: 8px;
+    transition: .4s;
+    box-shadow: 1px 3px 4px rgb(245, 243, 243);
+}
+.header-form .middle:hover{
+    box-shadow: 2px 5px 5px rgb(231, 231, 231); 
+}
+
+.header-form .middle button{
+    font-weight: 500;
+    background-color: white;
+    font-size: 15px;
+}
+.header-form .middle i{
+    background-color: rgb(255, 60, 66);
+}
+
+/*-------------------------------- Login --------------------------------------*/
+.header-form .rigth{
+    justify-content: end;
+}
+
+.header-form .rigth .btn1{
+    border: none;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.header-form .rigth .btn1:hover{
+   background-color: rgba(231, 231, 231, 0.368);
+   border-radius: 25px;
+}
+.header-form .rigth .login{
+    background-color: white;
+    border: 1px solid rgb(231, 231, 231);
+    padding: 10px;
+    color: rgb(108, 107, 107);
+    transition: .4s;
+}
+.header-form .rigth .login:hover{
+    box-shadow: 2px 5px 5px rgb(231, 231, 231);
+
+}
+
+.header2{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+hr{
+    color: whitesmoke;
+}
+
+
+
+
+
+/* ----------------------Header End-------------------------------- */
+
+/*! --------------------------------------------------------------Form End ------------------------------------------ */
+
+
+
+
+
+/*! Evinizi Airbnb'ye Taşıyın Bölümü */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.evtasima{
+  width: 90% !important;
+  margin: 20px;
+  background:#fff !important;
+}
+.evtasima img{
+  height: 30px;
+  width: 30px;
+}
+#result{
+  font-size: 60px !important;
+}
+
+.evtasima .a1{
+  text-decoration:none;
+  background-color: #e22a4b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px !important;
+ 
+}
+
+/* --------- Ev taşıma Range ve Harita */
+.evtasima-range{
+  padding: 20px;
+  width: 90% !important; 
+}
+.evtasima-range input[type="range"] {
+  --thumb-color: #f80d0d; /* Başparmak (thumb) rengi */
+  --track-color: #aaa7a7; /* Yol (track) rengi */
+}
+.evtasima-range  input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: var(--thumb-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.evtasima-range  input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  background-color: var(--track-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.evtasima-search button{
+  text-decoration:none;
+  border: none !important;
+  background-color:#fff;
+  border: 1px solid #c7c5c5 !important;
+  padding:5px 10px ;
+  border-radius: 25px;
+}
+
+/* ------Ev tasıma 2 */
+.evtasima2{
+  padding: 20px;
+  width: 90% !important; 
+}
+
+/* -- Ev Taşıma3 --- */
+.evtasima3{
+  padding: 20px;
+  width: 85% !important; 
+}
+
+/* ---Ev taşıma tablo--- */
+.evtasima-table{
+  width:60% !important;
+}
+
+.evtasima-table .fa-check{
+  color:rgb(2, 216, 2) !important;
+  font-size: 25px;
+} 
+.evtasima-table .fa-xmark{
+  color: #e22a4b;
+  font-size: 25px;
+}
+.evtasima-table .baslik{
+  font-weight: 400;
+}
+
+.evtasima-table .text-secondary{
+ font-size: 17px;
+}
+.evtasima-table .korumalar p{
+  font-size: 18px !important;
+}
+.evtasima-table button{
+  width: 200px;
+  margin: auto;
+}
+.evtasima-table button:hover,.baska-sorular button:hover{
+  background-color: rgb(243, 250, 248) !important;
+}
+
+/* ---- Sorular ve akardion yapısı */
+.sorular-container{
+  background-color: #ece9e967;
+}
+.sorular{
+  width: 90% !important;
+  padding: 100px 0;
+ 
+}
+.sorular .accordion-button,.sorular .accordion-body {
+  background-color: #ece9e967;
+  font-size: 23px !important;
+}
+.sorular .accordion-body{
+  font-size: 19px !important;
+}
+.sorular .accordion-button:focus{
+  border:none;
+  background-color: #ece9e967;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.ev-footer{
+  background-color: #ece9e967;
+}
+
+
+/* Width = 744px altında düşünce navbar */
+.responsive-navbar{
+  width: 100% !important;
+  margin: auto;
+}
+.responsive-navbar button{
+  width: 100%;
+  margin: auto;
+  background-color: #e22a4b;
+  color: white;
+  border: none !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px !important;
+}
+
+/* Responsiv Bölümü */
+
+
+@media screen and (max-width:1128px) {
+  .evtasima-table{
+      width:90% !important;
+  }
+}
+@media screen and (max-width:991px) {
+  .sorular-accordion{
+      margin-top: 75px !important;
+  }
+  iframe{
+      height: 450px !important;
+  }
+}
+/*! Evinizi Airbnb'ye Taşıyın Bölümü *
+
+
+
+/*! Register Bölümü */
+.register input{
+  border: 1px solid #7f7f7f;
+}
+.register input:focus{
+  box-shadow: none !important;
+  border: 2px solid black;
+}
+/* input .form-control{
+  border-radius: none;
+} */
+form.register input {
+  border-radius: 0;
+}
+.veya{
+  margin: 5px;
+}
+
+.hr1,
+.hr2{
+  
+  width: 100%;
+  height: 1px;
+  background-color: rgb(221, 221, 221);
+}
+/*! Register Bölümü */
+
+
+/*! İLAN EKLEME ADIMLARI */
+/*?---------Yerinizi Anlatin(İlan2),Ön plan(İlan5),Bitir ve yayınla(İlan9) START--------- */
+.ilan11{
+  width: 95% !important;
+}
+.ilan11-h{
+  font-size: 50px;
+  font-weight: 600;
+}
+.ilan11 .p1{
+ 
+  color: #000;
+  font-weight: 600 !important;
+}
+
+.ilan11-footer{
+  width: 95% !important;
+ position:fixed;
+ bottom: 30px;
+}
+.ilan11-footer a{
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(212, 8, 8);
+}
+.s3-1{
+  width: 95% !important;
+  padding: 50px 0 20px 0;
+}
+
+.s3-btn button{
+
+  border: none;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(214, 214, 214);
+}
+.s3-btn button:hover{
+  border: 1px solid black;
+}
+
+/*?---------Yerinizi Anlatin(İlan2),Ön plan(İlan5),Bitir ve yayınla(İlan9) END--------- */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ilan navbar */
+.ilan{
+  width: 95% !important;
+  padding: 50px 0 20px 0;
+}
+
+.ilan-btn button{
+
+  border: none;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(214, 214, 214);
+}
+.ilan-btn button:hover{
+  border: 1px solid black;
+}
+
+hr{
+  top: 105px !important;
+}
+/* ilan3  */
+.ilan1{
+  width: 60% !important;
+}
+.ilan1 .ilan1-logo{
+  width: 30%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid rgb(214, 214, 214);
+  background-color: white;
+  
+  
+}
+
+.ilan1 .ilan1-logo:hover{
+  border: 1px solid black;
+}
+
+.footer-basla{
+  width: 95% !important;
+  height: 30px;
+
+}
+.footer-basla .a1{
+  border: none;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: .3;
+  transition: .3s;
+}
+.footer-basla .a1:hover{
+  background-color: black;
+  opacity:1;
+  
+}
+
+@media screen and (max-width:867px) {
+  .ilan-logo{
+      display: none !important;
+  }
+  .ilan-btn{
+      width: 100%;
+  }
+  .ilan1{
+      width: 100% !important;
+      margin: auto !important;
+  }
+  .ilan1-logo{
+      width: 50%;
+      
+  }
+  
+}
+/* ilan3  */
+
+.ilan2{
+width: 45% !important;
+
+}
+
+.ilan2 hr{
+color: rgb(180, 178, 178);
+}
+
+@media screen and (max-width:748px) {
+.ilan2{
+  width: 85% !important;
+}
+}
+
+/* ian8 */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.s3-1{
+  width: 95% !important;
+  padding: 50px 0 20px 0;
+}
+
+.s3-btn button{
+
+  border: none;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(214, 214, 214);
+}
+.s3-btn button:hover{
+  border: 1px solid black;
+}
+
+hr{
+  top: 105px !important;
+}
+.s3-1-2{
+  width: 60% !important;
+}
+.s3-1-2 .s3-logo{
+  width: 30%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid rgb(214, 214, 214);
+  background-color: white;
+  
+  
+}
+
+.s3-1-2 .s3-logo:hover{
+  border: 1px solid black;
+}
+
+.footer-basla{
+  width: 95% !important;
+  height: 70px;
+}
+.footer-basla .a1{
+  border: none;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: .3;
+  transition: .3s;
+}
+.footer-basla .a1:hover{
+  background-color: black;
+  opacity:1;
+  
+}
+
+@media screen and (max-width:867px) {
+  .logo-s3{
+      display: none !important;
+  }
+  .s3-btn{
+      width: 100%;
+  }
+  .s3-1-2{
+      width: 100% !important;
+      margin: auto !important;
+  }
+  .s3-logo{
+      width: 50%;
+      
+  }
+ 
+}
+/* ilan8 sayfasi */
+
+.altyazi{
+font-size: 20px;
+color: gray;
+}
+
+.baslikgir{
+  border-radius: 8px;
+  height: 220px;
+}
+
+.baslikgir-max-karakter{
+  font-weight: bold;
+  color: gray;
+}
+/* ilan8 sayfasi */
+
+/* ilan16 */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.content {
+  text-align: center;
+}
+
+.left-half {
+width: 50%;
+height: 100%;
+background-color: #f1f1f1; /* İstediğiniz arka plan rengini burada belirtebilirsiniz  */
+float: left;
+}
+
+.right-half {
+width: 50%;
+height: 609px;
+background-color: black; /* İstediğiniz arka plan rengini burada belirtebilirsiniz */
+float: left;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.left-half iframe {
+max-width: 100%;
+max-height: 100%;
+}
+h1{
+color: white;
+}
+p{
+color: white;
+} 
+@media (max-width: 743px) {
+.container {
+flex-direction: column;
+}
+
+.left-half {
+width: 100vh;
+height: auto;
+}
+
+.right-half {
+width: 100%;
+height: auto;
+}
+}
+@media (min-width: 1295px) {
+.left-half video {
+  width: 100%;
+  height: 100%;
+}
+}
+/* ilan16 */
+
+/* ilan7 */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+}
+.s3-1{
+  width: 95% !important;
+  padding: 50px 0 20px 0;
+}
+
+.s3-btn button{
+  border: none;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(214, 214, 214);
+  
+}
+.s3-btn button:hover{
+  border: 1px solid black;
+}
+
+/* Fotoğraf ekleme containerı */
+
+.container-add8 {
+  width: 80%;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+.container-add8 h2{
+  margin-top: 100px;
+  font-weight: bold;
+  font-size: 38px;
+}
+
+.container-add8 p {
+  color: gray;
+}
+
+.container-add8 i{
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.fileimage{
+  width: 600px;
+  height: 500px;
+  margin-top: 80px;
+  text-align: center;
+  margin: auto;
+  font-size: 25px;
+  border: 2px dashed black;
+}
+
+.form-control{
+  width: 20%;
+  margin: auto;
+}
+
+.fileimage i,label,input{
+  margin-top: 25%;
+}
+/* ilan7 */
+
+/* ilan10 */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+}
+.s3-1{
+  width: 95% !important;
+  padding: 50px 0 20px 0;
+}
+
+.s3-btn button{
+  border: none;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(214, 214, 214);
+  
+}
+.s3-btn button:hover{
+  border: 1px solid black;
+}
+
+.form-control:focus{
+  outline: 1px solid white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.container-fiyat {
+  width: 70%;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.container-fiyat h1{
+  margin-top: 150px;
+}
+
+.input-group-money{
+  margin: auto;
+  display: flex;
+  margin-top: 100px;
+}
+/* ilan10 */
+
+.kategori{
+  border: 3px solid #e22a4b;
+  border-radius: 10px;
+  padding: 100px;
+  margin: 120px;
+}
+
+.adres{
+  border: 3px solid #e22a4b;
+  border-radius: 10px;
+  padding: 100px;
+  margin-top: 100px;
+  margin: 120px;
+}
+
+.evOzellik{
+  border: 3px solid #e22a4b;
+  border-radius: 10px;
+  padding: 100px;
+  margin-top: 100px;
+  margin: 120px;
+}
+
+.aciklama{
+  border: 3px solid #e22a4b;
+  border-radius: 10px;
+  padding: 100px;
+  margin-top: 100px;
+  margin: 120px;
+}
+
+.resim{
+  border: 3px solid #e22a4b;
+  border-radius: 10px;
+  padding: 100px;
+  margin-top: 100px;
+  margin: 120px;
+}
+
+.fiyat{
+  border: 3px solid #e22a4b;
+  border-radius: 10px;
+  padding: 100px;
+  margin-top: 100px;
+  margin: 120px;
+}
+
+.girisCikis{
+  border: 3px solid #e22a4b;
+  border-radius: 10px;
+  padding: 100px;
+  margin-top: 100px;
+  margin: 120px;
+}
+
+/*! İLAN EKLEME ADIMLARI */
+
+
+/*! Card Detay */
+/* Navbar start */
+
+.cardDetay{
+  width: 90% !important;
+}
+
+.secenek .row{
+  border: 1px solid rgb(225, 223, 223);
+  height: 75px !important;
+  border-radius: 10px;
+}
+
+/* Evsahibi card */
+.evSahibi{
+  background-color: rgb(236, 235, 235);
+  border-radius: 30px;
+}
+.ev-sahibi-card{
+
+  border: 1px solid rgb(225, 223, 223);
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.evsahibi-p{
+  font-size: 12px;
+}
+
+/* stıcky İmg */
+.sticky-img{
+  border: 1px solid rgb(225, 223, 223);
+  height: 325px !important;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px  3px rgb(225, 223, 223);
+  position:sticky;
+  top: 100px;
+  right: 100px;
+  bottom: 7000px;
+  z-index: 1;
+}
+
+.misafir-ekle .col-5,.misafir-ekle .col-10{
+  border: 1px solid rgb(225, 223, 223);
+}
+.cardDetay{
+  width: 90% !important;
+}
+.cardDetay-search{
+  width: 350px !important;
+  margin-left: 70px;
+  border: none;
+  border: 1px solid rgb(209, 208, 208);
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 3px 2px 4px rgb(180, 178, 178);
+}
+.cardDetay-search i{
+  color: white;
+  background-color: rgb(205, 26, 26);
+  padding: 7px;
+  border-radius: 50%;
+}
+.cardDetay-search span{
+  font-size: 15px;
+  font-weight: 500;
+}
+.cardDetay-login{
+  padding: 5px  7px;
+  border: none;
+  
+  border-radius: 10px;
+  transition: .4s;
+}
+.cardDetay-login a{
+  text-decoration: none;
+  color: black;
+}
+.cardDetay-login span{
+  font-weight: 600;
+  font-size: 16px;
+}
+.cardDetay-logo span{
+  color: rgb(242, 87, 120);
+  font-size: 22px;
+  font-weight: 700;
+}
+.cardDetay-login:hover{
+  background-color: #f6f0f0 !important;
+}
+
+.cardDetay-img1 img{
+  opacity: .6;
+  transition: 0.5s;
+}
+.cardDetay-img1 img:hover{
+  opacity: 1;
+  transform: scale(1.01);
+}
+
+/* Sosyal medya paylaş */
+.whatsapp-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.facebook-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.twitter-logo {
+  width: 30px;
+  height: 30px;
+}
+.dropdown-btn{
+  background-color: #FF385C !important;
+  margin-right: 5px;
+}
+/* Sosyal medya paylaş */
+
+@media screen and (max-width:986px) {
+  .cardDetay-logo span{
+    display: none !important;
+  }
+  .cardDetay-search{
+    margin-left: 0px;
+    width: 300px !important;
+  }
+  .cardDetay-login span{
+    font-size:14px ;
+  }
+}
+/*! Card Detay */
+
+
+
+/* Hesap */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,500&family=Goldman&family=Instrument+Serif&family=Montserrat:ital,wght@1,100&family=Noto+Sans+JP:wght@100;200&display=swap');
+
+.account-info-general{
+  margin-top: 64px;
+  margin-bottom: 56px;
+}
+.account-info{
+  color: rgb(34, 34, 34);
+  font-size:32px ;
+  line-height:36px ;
+  font-weight:600 ;
+ 
+}
+
+.account-info-2{
+  color: rgb(34, 34, 34);
+  font-size:18px ;
+  line-height:24px ;
+  font-weight:400 ;
+}
+
+.card-general{
+  padding: 16px;
+  width:33.3333% ;   
+}
+
+.card{
+  
+  background:transparent;
+  border:none;
+  border-radius: 12px ;
+  box-shadow:0px 6px 16px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  height: 100%;
+  margin: 8px 0;
+}
+.card-body svg{
+  margin-bottom: 16px;
+}
+
+.hesap-card-title{
+  font-size:16px;
+  font-weight: 600;
+  line-height:20px;
+  margin-bottom:8px;
+}
+.card-text{
+  font-size:14px ;
+  line-height: 18px;
+  color: #717171 ;
+  font-weight: 400;
+}
+/* Hesap */
+
+/* ------------------------------------------ Filter Start------------------------------------- */
+
+/* ---------section1--------- */
+.part{
+  padding-inline:24px;
+  padding-block: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+
+}
+/* filtre butonu css */
+.small-form {
+  max-width: 100px;
+}
+.form-input{
+  width: 100px;
+}
+
+.small-form .form-control {
+  width: 100px;
+}
+.small-button {
+  padding: 5px 10px;
+  font-size: 12px;
+  width: 70px;
+  height: 40px;
+} 
+/* filtre butonu css */
+
+.filter-title{
+  color: rgb(34, 34, 34);
+  font-weight: 600 ;
+  line-height: 26px;
+  font-size: 22px;
+  padding-bottom: 8px;
+}
+.filter-subhead{
+  color: rgb(34, 34, 34);
+  font-weight: 400 ;
+  line-height: 20px;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+
+.part-1 .search-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.part-1 input[type="text"] {
+  padding: 10px;
+  cursor: text;
+  margin: 0;
+  border: none;
+  border-radius:8px;
+  box-shadow: inset 0 0 0 1px #B0B0B0;
+  background-color:#FFFFFF;
+  position: relative;
+  min-height: 56px;
+  width: 100%;
+  color: #222222;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.part-1 .divider {
+  width: 20px;
+  height: 1px;
+  margin:8px;
+  background-color: #222;
+ 
+
+}
+
+
+
+/* ----------section2 ----------*/
+
+
+.subpart{
+  padding-bottom: 16px;
+}
+.filter-subhead2{
+  color: rgb(34, 34, 34);
+  font-weight: 400 ;
+  line-height: 20px;
+  font-size: 16px;
+  padding-top: 4px;
+  padding-bottom: 20px;
+
+}
+.filter-btn2 button{
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  background-color: #FFFFFF;
+  border-color: #DDDDDD;
+  color: rgb(34, 34, 34);
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 30px;
+  min-width: 59px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.button-black{
+  background-color: rgb(34, 34, 34) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+
+/* -------------section3 ----------------*/
+
+.part3 .btn{
+ 
+  transition-property:transform,background-color,border-color;
+  transition-duration:0.15s;
+  transition-timing-function:ease-in-out;
+  text-align:start;
+  border-radius:12px;
+
+}
+.part3 button{
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+}
+.btn span{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+ 
+  
+}
+.btn img{
+  width: 32px;
+  height: 32px;
+}
+
+.btn-description{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  display: block;
+  color: #222222;
+  padding-top: 32px;
+}
+
+.button-ev-tipi
+{
+  border: 2px solid black !important;
+  background-color: #F7F7F7;
+}
+
+/*--------------- section4 ---------------*/
+
+#filter-modal .part-4 h3{
+    color: rgb(34, 34, 34);
+    font-weight: 600 ;
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-top: 8px;
+  
+}
+
+#filter-modal .part-4 .filter-title{
+  color: rgb(34, 34, 34);
+  font-weight: 600 ;
+  line-height: 26px;
+  font-size: 22px;
+  padding-bottom: 8px;
+
+
+}
+
+/*------------------- section5 --------------*/
+
+.part-5{
+padding-top: 12px;
+padding-bottom: 12px;
+padding-right: 12px;
+justify-content: space-between;
+align-items: center;
+}
+
+.part-5 .filter-title{
+  color: rgb(34, 34, 34);
+  font-weight: 600 ;
+  line-height: 26px;
+  font-size: 22px;
+  padding-bottom: 8px;
+
+}
+.filter-description5{
+padding-top: 4px;
+font-size: 14px;
+line-height: 18px;
+font-weight: 400;
+color: rgb(113, 113, 113) ;
+
+}
+
+.filter-subhead5{
+  color: rgb(34, 34, 34);
+  font-weight: 400 ;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+/*
+.filter .form-switch .form-check-input {
+  width: 3.5rem;
+  height: 2.5rem;
+  margin-right: 0;
+  min-width: 50px;
+}
+*/
+/* section6 */
+
+.filter-subhead-6{
+  color: rgb(34, 34, 34);
+  font-weight: 600 ;
+  line-height: 20px;
+  font-size: 16px;
+  padding-top: 8px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+  
+}
+
+.filter-title-6{
+  color: rgb(34, 34, 34);
+  font-weight: 600 ;
+  line-height: 26px;
+  font-size: 22px;
+  padding-bottom: 8px;
+
+
+}
+
+/* section7 */
+.filter-subhead-7{
+  color: rgb(34, 34, 34);
+  font-weight: 400 ;
+  line-height: 20px;
+  font-size: 16px;
+  
+
+  
+}
+
+.filter-description-7{
+  padding-top: 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(113, 113, 113) ;
+}
+
+.filter-title-7{
+  color: rgb(34, 34, 34);
+  font-weight: 600 ;
+  line-height: 26px;
+  font-size: 22px;
+  padding-bottom: 24px;
+
+
+}
+
+
+
+
+
+/* FILTER CHECKBOX */
+
+.checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+ margin-top: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+}
+
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 2px solid #B0B0B0;
+  border-radius: 4px;
+
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkmark {
+  background-color: #222;
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* filter-end */
+
+/* profil container */
+
+.profil-container {
+  margin-top: 50px;
+  margin-bottom: 500px;
+  text-align: center;
+}
+
+.misafir-section {
+  width: 342px;
+  height: 234.78px;
+  padding: 32px 24px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.profil {
+  height: 104px;
+}
+
+.profilname-h1 {
+  font-weight: bold;
+}
+
+.profil-h6 {
+  font-weight: bold;
+}
+
+.profil-img {
+  height: 104px;
+}
+
+.onayli-bilgiler {
+  width: 342px;
+  height: 390px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.onayli-bilgiler-h3 {
+  font-weight: bold;
+
+}
+
+.onayli-bilgiler-icin-section-img {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+
+}
+
+.onayli-bilgiler-h5 {
+  margin-left: 10px;
+}
+
+.onayli-bilgiler-cizgi {
+  color: #333;
+  width: 280px;
+  height: 8px;
+}
+
+
+.onayli-bilgiler-h3 {
+  font-weight: bold;
+  margin: 13px;
+}
+
+.onayli-bilgiler-h5 {
+  margin: 13px;
+}
+
+.onayli-bilgiler-p {
+  font-weight: bold;
+}
+
+
+.profil-olusturma-zamani-h2 {
+  font-weight: bold;
+  
+}
+
+.span-profil-olusturma {
+  font-size: 14px;
+  max-width: 300px;
+  display: block;
+  
+}
+
+.my-custom-class {
+  display: inline-block;
+  width: 140px;
+  height: 48px;
+  margin-right: 200px;
+}
+
+@media (max-width: 768px) {
+.profil-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.misafir-section, .onayli-bilgiler{
+margin-left: auto;
+margin-right: auto;
+}
+.profil-olusturma{
+margin-left: 200px;
+}
+
+}
+/* profil container */
+
+/* bildirimler */
+.bildirim-container{
+  margin-top:50px; 
+  margin-bottom:500px;
+  text-align: center;
+}
+
+.bildirimler-responsive img{
+width:48px ;
+height: 48px;
+margin-right: 10px;
+
+}
+
+.bildirim-ekranı-responsive{
+
+width: 48px;
+height: 48px;
+}
+
+.yazilar {
+  text-align: justify;
+}
+
+.yazilar .tarih {
+  text-align: left;
+}
+
+.yazilar img{
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+}
+/* bildirimler */
+
+/* seyahatler */
+.btn-outline-secondary:hover{
+  background-color: #f7f7f7;
+  color: black;
+}
+
+.btn-outline-secondary{
+  width: 179px; 
+  height:47px; 
+  border-radius:8px;
+  color: #000;
+  background-color: white;
+}
+
+.btn-outline-secondary h5{
+font-weight: bold;
+
+}
+
+
+.seyahatler-container{
+  margin-top:50px; 
+  margin-bottom:500px;
+  margin-left:110px;
+  
+}
+
+.seyahatler-container h1{
+font-size: 36px;
+margin-bottom: 15px;
+font-weight: bold;
+}
+
+.seyahatler-container h2{
+  font-size: 25.8px;
+  margin-top:10px;
+  font-weight: bold;
+}
+
+.seyahatler-container p{
+  font-size: 16.8px;
+
+}
+
+.seyahatler-container hr{
+  width: 1308px; 
+  height: 5px; 
+  color: black;
+}
+
+.col.left.text-start{
+  padding-left: 110px;
+  
+}
+
+@media screen and (max-width: 744px) {
+  .seyahatnav-container {
+    display: none;
+    
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .seyahat-span{
+display: none;
+
+  }
+}
+
+.ziyaret a{
+font-weight: bold;
+color: black;
+font-size: 15.9px;
+}
+
+.seyahet-p{
+  color: black;
+}
+
+/* seyahatler */
+
+/* Odeme Navbar */
+
+.odeme-navbar{
+  width: 97% !important;
+}
+.odeme-navbar span{
+  font-size: 27px;
+  color: rgb(245, 22, 100);
+  font-weight: 600;
+}
+
+/* Odeme İçerik */
+
+.odeme-icerik{
+  width: 90% !important;
+}
+.odeme-icerik a:hover{
+  opacity: .6;
+}
+.odeme-icerik .form-check-label {
+  color: black;
+}
+.odeme-icerik .form-check-input[type="radio"]:checked {
+  background-color: black;
+  border-color: black;
+}
+.odeme-secenek{
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 20px;
+  padding: 10px;
+}
+.odeme-sticy{
+  border: 1px solid rgb(209, 208, 208);
+  box-shadow: 1px 2px 2px rgb(209, 208, 208);
+  padding: 10px 5px;
+  border-radius: 25px;
+  max-height: 400px;
+  position: sticky;
+  top: 200px;
+}
+.odeme-sticy img{
+  min-height: 100px !important;
+  max-width:270px ;
+}
+@media screen and (max-width:768px) {
+  .odeme-sticy{
+      position:static;
+      max-height: 600px;
+  }
+}
+
+/* Odeme Navbar */
+
+/* mesajlar */
+.container-mesajlar {
+  display: flex;
+  height: 100vh;
+}
+
+.line {
+  width: 2px;
+  height: 100%;
+  background-color: #a19c9c;
+  margin-right: 500px; /* İstediğiniz kadar sağa yaklaştırma yapabilirsiniz */
+}
+
+.content {
+    width: 50%;
+  padding: 0px;
+}
+.header{
+  padding: 20px 40px !important;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+/* mesajlar */
+
+/* Profil */
+
+
+.bildirim-container {
+  margin-top: 50px;
+  margin-bottom: 500px;
+  text-align: center;
+}
+
+.misafir-section {
+  width: 342px;
+  height: 234.78px;
+  padding: 32px 24px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.profil {
+  height: 104px;
+}
+
+.profilname-h1 {
+  font-weight: bold;
+}
+
+.profil-h6 {
+  font-weight: bold;
+}
+
+.profil-img {
+  height: 104px;
+}
+
+.onayli-bilgiler {
+  width: 342px;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.onayli-bilgiler-h3 {
+  font-weight: bold;
+}
+
+.onayli-bilgiler-icin-section-img {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.onayli-bilgiler-h5 {
+  margin-left: 10px;
+}
+
+.onayli-bilgiler-cizgi {
+  color: #333;
+  width: 280px;
+  height: 8px;
+}
+
+.onayli-bilgiler-h3 {
+  font-weight: bold;
+  margin: 13px;
+}
+
+.onayli-bilgiler-h5 {
+  margin: 13px;
+}
+
+/* .profil-btn {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  margin: 50px;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  background-color: white;
+  border-radius: 8px;
+} */
+
+.onayli-bilgiler-p {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  color: black;
+}
+
+.profil-olusturma-zamani-h2 {
+  font-weight: bold;
+}
+
+.span-profil-olusturma {
+  font-size: 14px;
+  max-width: 300px;
+  display: block;
+}
+
+/* .my-custom-class {
+  display: inline-block;
+  width: 140px;
+  height: 48px;
+  margin-right: 200px;
+} */
+
+
+@media (max-width: 768px) {
+  .bildirim-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .misafir-section,
+  .onayli-bilgiler {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .profil-olusturma {
+    margin-left: 200px;
+  }
+}
+/* Profil */
+
+/* HESAP SAYFASI CSS */
+.hesap__left p{
+  font-size: 17px;
+  font-weight: 500;
+}
+.hesap__p {
+  font-size: 14px !important;
+  font-weight: 400;
+  border: 1px solid rgb(253, 154, 154);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px  rgb(202, 201, 201);
+  color: #717171;
+}
+.hesap__b {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}   
+.hesap__section {
+  width: 68%;
+}
+.hesap__width {
+width: 69% ; 
+}
+.hesap__a {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-decoration: dashed !important;
+}
+.hesap_container .hesap_h5 {
+  font-size: 19px;
+  font-weight: 500;
+}
+.hesap__h2 {
+  font-size: 30px;
+}
+.hesap__h4 {
+font-weight: 600;
+}
+.hesap__container {
+  width: 70%;
+}
+.hesap__info {
+padding: 10px 10px;
+margin-top: 10% ;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+border-radius: 10px;
+width: 100%;
+height:25vh;
+}
+.hesap__title {
+font-weight: 400;
+}
+.button__hesap {
+color: #FF385C;
+}
+.hesap__hr {
+width: 100%;
+color: grey;
+}
+.arrow__left {
+margin-left: 260px;
+display: none;
+}
+.hesap__button {
+background-color: transparent;
+border: none;
+}
+.hesap__list {
+list-style-type: disc !important;
+}
+.hesap__email{
+width: 26%;
+height: 5%;
+background-color: #008489;
+border-radius: 4px;
+padding: 13px 16px;
+margin-top:2%;
+color: #fff;
+opacity: 0.3;
+}
+.payment__button {
+padding: 6px 10px;
+border-radius: 5px;
+background-color: transparent;
+}
+.payment__button:hover {
+background-color: #F5F5F5;
+}
+.payment__active {
+color: #000000;
+}
+.hesap__security {
+background-color: #008489;
+color: #fff;
+border-radius: 5px;
+width: 100px;
+height: 50px;
+}
+.hesap__color {
+color: #008489;
+}
+.hesap__active {
+color: #008489;
+}
+.hesap__goster {
+display: block;
+}
+.hesap__hidden {
+display: none;
+}
+.hesap_container .hesap_line {
+width: 65%;
+}
+.hesap_container .hesap_button:focus {
+color: #008489;
+}
+.hesap__switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.hesap__switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.hesap__slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.hesap__slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+.hesap_switch input:checked + .hesap_slider {
+background-color: black;
+}
+
+.hesap_switch input:focus + .hesap_slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+.hesap_switch input:checked + .hesap_slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+.hesap_slider.hesap_round {
+border-radius: 34px;
+}
+
+.hesap_slider.hesap_round:before {
+border-radius: 50%;
+}
+
+.hesap__accordion .container {
+position: relative;
+margin: 10px 10px;
+}
+.hesap_accordion .hesap_label::before {
+
+color: black;
+position: absolute;
+top: 50%;
+right: -5px;
+font-size: 30px;
+transform: translateY(-50%);
+}
+
+.hesap_accordion .hesap_content {
+position: relative;
+background: white;
+height: 0;
+text-align: justify;
+overflow: hidden;
+transition: 0.5s;
+}
+
+.hesap__accordion hr {
+width: 100px;
+margin-left: 0;
+border: 1px solid grey;
+}
+.hesap_accordion .accordioncontainer.active .hesap_content {
+height: 170px;
+}
+
+
+.hesap_accordion .accordioncontainer.active .hesap_label::before {
+content: '-';
+}
+
+@media screen and (max-width: 777px) {
+.hesap__width {
+  width: 100% !important;
+}
+.hesap__email {
+  width: 100%;
+  margin-top: 3%;
+  margin-bottom: 13%;
+}
+.hesap__gosterme {
+  display: none;
+}
+.hesap__hidden {
+  display: block;
+}
+.hesap__top{
+  margin-top: 12% !important;
+}
+.hesap__line {
+  width: 100%;
+}
+.hesap__h2 {
+  display: block !important;
+}
+.hesap__section {
+  display: none;
+}
+
+.hesap__container {
+  width: 100%;
+}
+.hesap__left {
+  width: 100%;
+}
+.hesap__right {
+  display: none;
+}
+}
+
+/* HESAP CSS BURADA BİTTİ */
