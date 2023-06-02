@@ -31,6 +31,18 @@
               </div>
               <div class="row">
                 <h4 class="mt-4 mb-4 fs-3">Önerilen dil ve bölge</h4>
+                <!-- Dil Çeviri Bölümü -->
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                {pageLanguage: 'tr', includedLanguages: 'en,ru,tr'},
+                'google_translate_element'
+                );
+                }
+                </script>
+                <script type="text/javascript" src= "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                </script>
                 <div class="dil col">
                   <span style="display:block;"><a href="" class="text-black text-decoration-none">English</a></span>
                   <span style="display:block;">United Kingdom</span>
